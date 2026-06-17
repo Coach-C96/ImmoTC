@@ -364,7 +364,7 @@
     <div class="field"><label>Notizen</label><textarea id="o-notizen" rows="3"></textarea></div>
     <div class="modal-foot">
       <button class="btn danger sm" id="o-delete" onclick="deleteObjekt()" style="display:none">Löschen</button>
-      <button class="btn ghost sm" id="o-archiv" onclick="archiveObjekt()" style="display:none">📦 Archivieren</button>
+      <button class="btn ghost sm" id="o-archiv" onclick="archiveObjekt()" style="display:none">Archivieren</button>
       <div class="right">
         <button class="btn ghost" onclick="closeModals()">Abbrechen</button>
         <button class="btn" onclick="saveObjekt()">Speichern</button>
@@ -409,7 +409,7 @@
     <div class="field"><label>Notizen</label><textarea id="k-notizen" rows="3" placeholder="z.B. Rückruf vereinbart, Finanzierung steht"></textarea></div>
     <div class="modal-foot">
       <button class="btn danger sm" id="k-delete" onclick="deleteKontakt()" style="display:none">Löschen</button>
-      <button class="btn ghost sm" id="k-archiv" onclick="archiveKontakt()" style="display:none">📦 Archivieren</button>
+      <button class="btn ghost sm" id="k-archiv" onclick="archiveKontakt()" style="display:none">Archivieren</button>
       <div class="right">
         <button class="btn ghost" onclick="closeModals()">Abbrechen</button>
         <button class="btn" onclick="saveKontakt()">Speichern</button>
@@ -439,7 +439,7 @@
         <div class="hint">Beim Abhaken wird automatisch die nächste angelegt</div>
       </div>
       <div class="field" style="max-width:180px"><label>Priorität</label>
-        <select id="a-prio"><option value="">Normal</option><option value="hoch">🔴 Hoch</option><option value="mittel">🟠 Mittel</option><option value="niedrig">⚪ Niedrig</option></select>
+        <select id="a-prio"><option value="">Normal</option><option value="hoch">Hoch</option><option value="mittel">Mittel</option><option value="niedrig">Niedrig</option></select>
       </div>
     </div>
     <div class="modal-foot">
@@ -459,11 +459,11 @@
     <input type="hidden" id="x-kontakt"><input type="hidden" id="x-objekt">
     <div class="row">
       <div class="field"><label>Art</label>
-        <select id="x-art"><option>📞 Anruf</option><option>✉️ E-Mail</option><option>👁 Besichtigung</option><option>🤝 Termin</option><option>📝 Notiz</option></select>
+        <select id="x-art"><option>Anruf</option><option>E-Mail</option><option>Besichtigung</option><option>Termin</option><option>Notiz</option></select>
       </div>
       <div class="field"><label>Datum</label><input id="x-datum" type="date"></div>
     </div>
-    <div class="field"><label>Was ist passiert? * <button type="button" class="quick-btn" id="mic-btn" onclick="toggleDiktat('x-text')" title="Diktieren">🎙</button></label><textarea id="x-text" rows="3" placeholder="z.B. Exposé per E-Mail versendet, Interessent meldet sich nächste Woche"></textarea></div>
+    <div class="field"><label>Was ist passiert? * <button type="button" class="quick-btn" id="mic-btn" onclick="toggleDiktat('x-text')" title="Diktieren">Diktat</button></label><textarea id="x-text" rows="3" placeholder="z.B. Exposé per E-Mail versendet, Interessent meldet sich nächste Woche"></textarea></div>
     <div class="field" style="max-width:240px"><label>Folgeaufgabe anlegen?</label>
       <select id="x-folge"><option value="">Keine</option><option value="1">Morgen nachfassen</option><option value="3">In 3 Tagen nachfassen</option><option value="7">In 1 Woche nachfassen</option><option value="14">In 2 Wochen nachfassen</option></select>
     </div>
@@ -492,7 +492,7 @@
     <div class="modal-foot">
       <div class="right">
         <button class="btn ghost" onclick="closeModals()">Abbrechen</button>
-        <button class="btn" onclick="sendSerie()">✉️ E-Mail öffnen (BCC)</button>
+        <button class="btn" onclick="sendSerie()">E-Mail öffnen (BCC)</button>
       </div>
     </div>
   </div>
@@ -501,7 +501,7 @@
 <!-- PIN-Sperre -->
 <div class="search-overlay" id="ov-lock" style="background:var(--bg);z-index:100">
   <div class="search-box" style="max-width:340px;text-align:center;padding:34px">
-    <div style="font-size:26px;font-weight:800;margin-bottom:6px">Immo<span style="color:var(--accent)">TC</span> 🔒</div>
+    <div style="font-size:26px;font-weight:800;margin-bottom:6px">Immo<span style="color:var(--accent)">TC</span> </div>
     <p style="color:var(--gray);font-size:14px;margin-bottom:18px" id="lock-label">PIN eingeben</p>
     <input id="lock-pin" type="password" inputmode="numeric" style="border:1px solid var(--border);border-radius:8px;text-align:center;font-size:22px;letter-spacing:6px" onkeydown="if(event.key==='Enter')checkPin()">
     <button class="btn" style="width:100%;margin-top:14px" onclick="checkPin()">Entsperren</button>
@@ -533,7 +533,7 @@
     <div class="modal-foot">
       <button class="btn danger sm" id="l-delete" onclick="deleteLead()" style="display:none">Löschen</button>
       <div class="right">
-        <button class="btn ghost sm" id="l-convert" onclick="convertLead()" style="display:none">→ Als Objekt übernehmen</button>
+        <button class="btn ghost sm" id="l-convert" onclick="convertLead()" style="display:none">Als Objekt übernehmen</button>
         <button class="btn ghost" onclick="closeModals()">Abbrechen</button>
         <button class="btn" onclick="saveLead()">Speichern</button>
       </div>
@@ -554,7 +554,7 @@
     <div class="modal-foot">
       <div class="right">
         <button class="btn ghost" onclick="copyVorlage()">Kopieren</button>
-        <button class="btn" onclick="sendVorlage()">✉️ E-Mail öffnen</button>
+        <button class="btn" onclick="sendVorlage()">E-Mail öffnen</button>
       </div>
     </div>
   </div>
@@ -685,7 +685,7 @@ async function unlockEncrypted(pw) {
 }
 async function enableEncryption() {
   if (!window.crypto || !crypto.subtle) { toast('Dein Browser unterstützt hier keine Verschlüsselung'); return; }
-  const p1 = prompt('Passwort festlegen.\n\n⚠️ WICHTIG: Ohne dieses Passwort sind die Daten UNWIEDERBRINGLICH verloren. Backups (JSON-Export) bleiben unverschlüsselt – bewahre sie sicher auf.');
+  const p1 = prompt('Passwort festlegen.\n\n WICHTIG: Ohne dieses Passwort sind die Daten UNWIEDERBRINGLICH verloren. Backups (JSON-Export) bleiben unverschlüsselt – bewahre sie sicher auf.');
   if (!p1) return;
   if (p1.length < 6) { toast('Mindestens 6 Zeichen'); return; }
   const p2 = prompt('Passwort wiederholen:');
@@ -694,8 +694,8 @@ async function enableEncryption() {
   encSalt = b64(salt);
   cryptoKey = await deriveKey(p1, salt);
   state.settings.pin = '';
-  logChange('🔐 Verschlüsselung aktiviert');
-  save(); render(); toast('🔐 Daten werden ab jetzt verschlüsselt gespeichert');
+  logChange('Verschlüsselung aktiviert');
+  save(); render(); toast('Daten werden ab jetzt verschlüsselt gespeichert');
 }
 function disableEncryption() {
   if (!confirm('Verschlüsselung aufheben? Die Daten liegen dann wieder im Klartext im Browser-Speicher.')) return;
@@ -868,10 +868,10 @@ function searchItems(q) {
   q = q.toLowerCase().trim();
   const hit = s => (s||'').toLowerCase().includes(q);
   const res = [];
-  aktiveObjekte().forEach(o => { if (!q || hit(o.titel) || hit(o.ort) || hit(o.strasse) || hit(o.tags)) res.push({icon:'🏢', label:o.titel, sub:(o.ort||'')+' · '+o.status, typ:'Objekt', go:()=>show('objektDetail',o.id)}); });
-  aktiveKontakte().forEach(k => { if (!q || hit(k.name) || hit(k.email) || hit(k.tags)) res.push({icon:'👤', label:k.name, sub:k.typ, typ:'Kontakt', go:()=>show('kontaktDetail',k.id)}); });
-  state.aufgaben.filter(a=>!a.erledigt).forEach(a => { if (!q || hit(a.titel)) res.push({icon:'✅', label:a.titel, sub:a.datum?fmtDate(a.datum):'', typ:'Aufgabe', go:()=>{show('aufgaben');setTimeout(()=>openAufgabe(a.id),50);}}); });
-  state.leads.filter(l=>!l.archiviert).forEach(l => { if (!q || hit(l.objekt) || hit(l.name)) res.push({icon:'🎯', label:l.objekt, sub:l.stufe, typ:'Lead', go:()=>{show('akquise');setTimeout(()=>openLead(l.id),50);}}); });
+  aktiveObjekte().forEach(o => { if (!q || hit(o.titel) || hit(o.ort) || hit(o.strasse) || hit(o.tags)) res.push({icon:'', label:o.titel, sub:(o.ort||'')+' · '+o.status, typ:'Objekt', go:()=>show('objektDetail',o.id)}); });
+  aktiveKontakte().forEach(k => { if (!q || hit(k.name) || hit(k.email) || hit(k.tags)) res.push({icon:'', label:k.name, sub:k.typ, typ:'Kontakt', go:()=>show('kontaktDetail',k.id)}); });
+  state.aufgaben.filter(a=>!a.erledigt).forEach(a => { if (!q || hit(a.titel)) res.push({icon:'', label:a.titel, sub:a.datum?fmtDate(a.datum):'', typ:'Aufgabe', go:()=>{show('aufgaben');setTimeout(()=>openAufgabe(a.id),50);}}); });
+  state.leads.filter(l=>!l.archiviert).forEach(l => { if (!q || hit(l.objekt) || hit(l.name)) res.push({icon:'', label:l.objekt, sub:l.stufe, typ:'Lead', go:()=>{show('akquise');setTimeout(()=>openLead(l.id),50);}}); });
   return res.slice(0, 9);
 }
 let searchResults = [];
@@ -932,7 +932,7 @@ let diktatRec = null;
 function toggleDiktat(targetId) {
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SR) { toast('Diktat wird von diesem Browser nicht unterstützt – am besten Chrome verwenden'); return; }
-  if (diktatRec) { diktatRec.stop(); diktatRec = null; document.getElementById('mic-btn').textContent='🎙'; return; }
+  if (diktatRec) { diktatRec.stop(); diktatRec = null; document.getElementById('mic-btn').textContent='Diktat'; return; }
   diktatRec = new SR();
   diktatRec.lang = 'de-DE';
   diktatRec.continuous = true;
@@ -943,10 +943,10 @@ function toggleDiktat(targetId) {
       if (e.results[i].isFinal) el.value = (el.value ? el.value + ' ' : '') + e.results[i][0].transcript.trim();
     }
   };
-  diktatRec.onend = () => { diktatRec = null; const b=document.getElementById('mic-btn'); if(b) b.textContent='🎙'; };
+  diktatRec.onend = () => { diktatRec = null; const b=document.getElementById('mic-btn'); if(b) b.textContent='Diktat'; };
   diktatRec.onerror = () => { toast('Diktat-Fehler – Mikrofon erlaubt?'); };
   diktatRec.start();
-  document.getElementById('mic-btn').textContent = '⏹';
+  document.getElementById('mic-btn').textContent = 'Stopp';
   toast('Diktat läuft – nochmal klicken zum Stoppen');
 }
 
@@ -985,7 +985,7 @@ function sendSerie() {
   const betreff = document.getElementById('se-betreff').value;
   const text = document.getElementById('se-text').value;
   location.href = 'mailto:?bcc=' + encodeURIComponent(emp.map(k=>k.email).join(',')) + '&subject=' + encodeURIComponent(betreff) + '&body=' + encodeURIComponent(text);
-  emp.forEach(k => state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: '✉️ E-Mail', text: 'Serien-E-Mail: ' + betreff, kontaktId: k.id, objektId: '' }));
+  emp.forEach(k => state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: 'E-Mail', text: 'Serien-E-Mail: ' + betreff, kontaktId: k.id, objektId: '' }));
   logChange('Serien-E-Mail an ' + emp.length + ' Empfänger: ' + betreff);
   save(); closeModals(); render(); toast('E-Mail-Entwurf geöffnet, ' + emp.length + '× dokumentiert');
 }
@@ -1005,14 +1005,14 @@ function checkGeburtstage() {
   let changed = false;
   aktiveKontakte().forEach(k => {
     if (k.geburtstag && k.geburtstag.slice(5) === md) {
-      const titel = '🎂 ' + k.name + ' zum Geburtstag gratulieren';
+      const titel = '' + k.name + ' zum Geburtstag gratulieren';
       if (!state.aufgaben.some(a => a.titel === titel && a.datum === heute)) {
         state.aufgaben.push({ id: uid(), titel, datum: heute, zeit:'', dauer:15, objektId:'', kontaktId:k.id, erledigt:false });
         changed = true;
       }
     }
   });
-  if (changed) { save(); toast('🎂 Geburtstags-Erinnerung angelegt'); }
+  if (changed) { save(); toast('Geburtstags-Erinnerung angelegt'); }
 }
 function toast(msg) {
   const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show');
@@ -1163,11 +1163,11 @@ function viewDashboard() {
   const letzteAkt = [...state.aktivitaeten].sort((a,b)=>b.ts-a.ts).slice(0,5);
 
   return `
-  <div class="page-head"><div><h1>Guten Tag, Christian 👋</h1><div class="sub">${new Date().toLocaleDateString('de-DE',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</div></div>
+  <div class="page-head"><div><h1>Guten Tag, Christian </h1><div class="sub">${new Date().toLocaleDateString('de-DE',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</div></div>
   <div class="btn-row">
-    ${location.protocol === 'https:' ? `<button class="btn sm" onclick="document.getElementById('importFile').click()">📥 Backup laden</button>
-    <button class="btn ghost sm" onclick="exportData()">📤 Backup teilen</button>` : ''}
-    <button class="btn ghost sm" onclick="exportAlleIcs()">📅 Alle Termine → Kalender</button>
+    ${location.protocol === 'https:' ? `<button class="btn sm" onclick="document.getElementById('importFile').click()">Backup laden</button>
+    <button class="btn ghost sm" onclick="exportData()">Backup teilen</button>` : ''}
+    <button class="btn ghost sm" onclick="exportAlleIcs()">Alle Termine in Kalender</button>
   </div></div>
   <div class="quick-grid">
     <div class="quick-card" onclick="openObjekt()"><span>${ic('building')}</span>+ Objekt</div>
@@ -1185,20 +1185,20 @@ function viewDashboard() {
   ${(() => {
     const heute = todayStr();
     const notare = aktiveObjekte().filter(o=>o.notartermin && o.notartermin >= heute).sort((a,b)=>a.notartermin<b.notartermin?-1:1);
-    return notare.length ? `<div class="card" style="margin-bottom:18px;background:#eef2ff;border-color:#c7d3f5">⚖️ <strong>Notartermine:</strong> ${notare.map(o=>`<span class="clickable" style="color:var(--primary);font-weight:600" onclick="show('objektDetail','${o.id}')">${esc(o.titel)}</span> am ${fmtDate(o.notartermin)} (${Math.ceil((new Date(o.notartermin+'T12:00')-new Date())/86400000)} Tage)`).join(' · ')}</div>` : '';
+    return notare.length ? `<div class="card" style="margin-bottom:18px;background:#eef2ff;border-color:#c7d3f5"><strong>Notartermine:</strong> ${notare.map(o=>`<span class="clickable" style="color:var(--primary);font-weight:600" onclick="show('objektDetail','${o.id}')">${esc(o.titel)}</span> am ${fmtDate(o.notartermin)} (${Math.ceil((new Date(o.notartermin+'T12:00')-new Date())/86400000)} Tage)`).join(' · ')}</div>` : '';
   })()}
   ${zielHtml()}
   ${objektAlarmHtml()}
   ${(() => {
     const ueber = state.leads.filter(l=>l.stufe!=='Verloren' && l.stufe!=='Auftrag' && l.datum && l.datum < heute).sort((a,b)=>a.datum<b.datum?-1:1);
-    return ueber.length ? `<div class="card" style="margin-bottom:18px;background:#fef3f2;border-color:#fecdca">📌 <strong>${ueber.length} Akquise-Wiedervorlage${ueber.length>1?'n':''} überfällig:</strong> ${ueber.slice(0,4).map(l=>`<span class="clickable" style="color:var(--primary);font-weight:600" onclick="show('akquise');openLead('${l.id}')">${esc(l.objekt)}</span> (${fmtDate(l.datum)})`).join(' · ')}${ueber.length>4 ? ' · +' + (ueber.length-4) + ' weitere' : ''}</div>` : '';
+    return ueber.length ? `<div class="card" style="margin-bottom:18px;background:#fef3f2;border-color:#fecdca"><strong>${ueber.length} Akquise-Wiedervorlage${ueber.length>1?'n':''} überfällig:</strong> ${ueber.slice(0,4).map(l=>`<span class="clickable" style="color:var(--primary);font-weight:600" onclick="show('akquise');openLead('${l.id}')">${esc(l.objekt)}</span> (${fmtDate(l.datum)})`).join(' · ')}${ueber.length>4 ? ' · +' + (ueber.length-4) + ' weitere' : ''}</div>` : '';
   })()}
   ${datenCheckHtml()}
-  ${matches ? `<div class="card" style="margin-bottom:18px;background:#e6f7f1;border-color:#abefd4">💚 <strong>${matches} Matching${matches>1?'s':''}:</strong> Es gibt Interessenten, deren Suchprofil zu deinen aktiven Objekten passt. Details in den Objekt-Seiten.</div>` : ''}
+  ${matches ? `<div class="card" style="margin-bottom:18px;background:#e6f7f1;border-color:#abefd4"><strong>${matches} Matching${matches>1?'s':''}:</strong> Es gibt Interessenten, deren Suchprofil zu deinen aktiven Objekten passt. Details in den Objekt-Seiten.</div>` : ''}
   <div class="grid c2">
     <div class="card">
       <h2>Nächste Aufgaben</h2>
-      ${naechste.length ? naechste.map(taskRow).join('') : '<div class="empty"><div class="big">🎉</div>Keine offenen Aufgaben</div>'}
+      ${naechste.length ? naechste.map(taskRow).join('') : '<div class="empty">Keine offenen Aufgaben</div>'}
     </div>
     <div>
       <div class="card" style="margin-bottom:18px">
@@ -1214,10 +1214,10 @@ function viewDashboard() {
         ${!state.objekte.length ? '<div class="empty">Noch keine Objekte angelegt</div>':''}
       </div>
       ${geburtstage.length ? `<div class="card" style="margin-bottom:18px">
-        <h2>🎂 Geburtstage (14 Tage)</h2>
+        <h2>Geburtstage (14 Tage)</h2>
         ${geburtstage.map(x => `<div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border)">
           <span class="clickable" style="color:var(--primary);font-weight:600" onclick="show('kontaktDetail','${x.k.id}')">${esc(x.k.name)}</span>
-          <span style="font-size:13px;color:${x.tage===0?'var(--accent)':'var(--gray)'}">${x.tage===0?'🎉 HEUTE':x.tage===1?'morgen':'in '+x.tage+' Tagen'}</span>
+          <span style="font-size:13px;color:${x.tage===0?'var(--accent)':'var(--gray)'}">${x.tage===0?'HEUTE':x.tage===1?'morgen':'in '+x.tage+' Tagen'}</span>
         </div>`).join('')}
       </div>` : ''}
       <div class="card">
@@ -1245,7 +1245,7 @@ function zielHtml() {
   return `
   <div class="card" style="margin-bottom:18px">
     <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:8px">
-      <strong>🎯 Jahresziel ${new Date().getFullYear()}: ${euro(ziel)}</strong>
+      <strong>Jahresziel ${new Date().getFullYear()}: ${euro(ziel)}</strong>
       <span style="font-size:13px;color:var(--gray)">Realisiert: <strong style="color:var(--accent)">${euro(Math.round(ist))}</strong> · Mit Pipeline: <strong>${euro(Math.round(ist+erwartet))}</strong> (${Math.round(pForecast)} %)</span>
     </div>
     <div class="progress" style="height:14px;position:relative;margin:0">
@@ -1266,19 +1266,19 @@ function viewObjekte() {
   <div class="page-head">
     <div><h1>Objekte</h1><div class="sub">${state.objekte.length} Objekte insgesamt</div></div>
     <div class="btn-row">
-      <button class="btn ghost" onclick="document.getElementById('objJsonInput').click()">⬆️ Objekt-Import</button>
-      <button class="btn ghost" onclick="document.getElementById('objCsvInput').click()">⬆️ CSV-Import</button>
+      <button class="btn ghost" onclick="document.getElementById('objJsonInput').click()">Objekt-Import</button>
+      <button class="btn ghost" onclick="document.getElementById('objCsvInput').click()">CSV-Import</button>
       <button class="btn ghost" onclick="exportObjekteCsv()">CSV-Export</button>
       <button class="btn" onclick="openObjekt()">+ Neues Objekt</button>
     </div>
   </div>
   <div class="filter-row">
-    <button class="chip ${objektAnsicht==='tabelle'?'active':''}" onclick="objektAnsicht='tabelle';render()">☰ Tabelle</button>
+    <button class="chip ${objektAnsicht==='tabelle'?'active':''}" onclick="objektAnsicht='tabelle';render()">Tabelle</button>
     <button class="chip ${objektAnsicht==='kanban'?'active':''}" onclick="objektAnsicht='kanban';render()">▦ Kanban</button>
-    <button class="chip ${objektAnsicht==='karte'?'active':''}" onclick="objektAnsicht='karte';render();setTimeout(initKarte,50)">🗺 Karte</button>
+    <button class="chip ${objektAnsicht==='karte'?'active':''}" onclick="objektAnsicht='karte';render();setTimeout(initKarte,50)">Karte</button>
     <span style="width:14px"></span>
     ${objektAnsicht==='tabelle' ? stati.map(s => `<button class="chip ${objektFilter===s?'active':''}" onclick="objektFilter='${s}';render()">${s}</button>`).join('') : ''}
-    <input class="search-input" placeholder="🔍 Suchen…" value="${esc(objektSuche)}" oninput="objektSuche=this.value;render()" style="margin-left:auto">
+    <input class="search-input" placeholder="Suchen…" value="${esc(objektSuche)}" oninput="objektSuche=this.value;render()" style="margin-left:auto">
   </div>
   ${objektAnsicht==='karte' ? `<div class="card" style="padding:10px"><div id="objekt-map" style="height:520px;border-radius:8px"></div><div class="hint" id="map-status" style="margin-top:8px">Karte lädt… (Internet erforderlich)</div></div>` :
   objektAnsicht==='kanban' ? kanbanHtml(list) : `<div class="card" style="padding:0">
@@ -1292,10 +1292,10 @@ function viewObjekte() {
           <td>${esc(o.ort||'–')}</td>
           <td>${euro(o.preis)}</td>
           <td style="color:var(--accent);font-weight:600">${o.preis?euro(Math.round(provisionVon(o))):'–'}</td>
-          <td>${m && o.status!=='Verkauft' ? '<span class="badge b-match">💚 '+m+'</span>' : '–'}</td>
+          <td>${m && o.status!=='Verkauft' ? '<span class="badge b-match">'+m+'</span>' : '–'}</td>
           <td><span class="badge b-${o.status.toLowerCase()}">${o.status}</span></td>
         </tr>`;}).join('')}</tbody>
-    </table>` : '<div class="empty"><div class="big">🏢</div>Keine Objekte gefunden</div>'}
+    </table>` : '<div class="empty">Keine Objekte gefunden</div>'}
   </div>`}`;
 }
 
@@ -1324,8 +1324,8 @@ function kbDrop(ev, status) {
     const vorher = o.status;
     o.status = status;
     handleVerkauft(o, vorher);
-    logChange('Status: ' + o.titel + ' → ' + status);
-    save(); toast(o.titel + ' → ' + status);
+    logChange('Status: ' + o.titel + ' -> ' + status);
+    save(); toast(o.titel + ' -> ' + status);
   }
   render();
 }
@@ -1341,20 +1341,20 @@ function viewObjektDetail(id) {
   const mapsUrl = addr ? 'https://maps.apple.com/?q=' + encodeURIComponent(addr) : '';
 
   return `
-  <button class="back" onclick="show('objekte')">← Alle Objekte</button>
+  <button class="back" onclick="show('objekte')">Alle Objekte</button>
   <div class="page-head">
     <div><h1>${esc(o.titel)}</h1><div class="sub">${esc(o.typ)} · <span class="badge b-${o.status.toLowerCase()}">${o.status}</span>${addr ? ' · ' + esc(addr) : ''}${notarBadge(o)}</div></div>
     <div class="btn-row">
-      ${mapsUrl ? `<a class="btn ghost sm" href="${mapsUrl}" target="_blank">🗺 Karte</a>` : ''}
-      <button class="btn ghost sm" onclick="printDatenblatt('${o.id}')">📄 Datenblatt</button>
-      <button class="btn ghost sm" onclick="printBesichtigung('${o.id}')">🚶 Infoblatt Besichtigung</button>
-      <button class="btn ghost sm" onclick="printBericht('${o.id}')">📊 Bericht</button>
-      <button class="btn ghost sm" onclick="openRechnung('${o.id}')">🧾 Rechnung</button>
-      <button class="btn ghost sm" onclick="applyWorkflowPrompt('${o.id}')">⚡ Aufgabenpaket</button>
-      <button class="btn ghost sm" onclick="copyDossier('${o.id}')">🤖 Dossier für Claude</button>
-      <button class="btn ghost sm" onclick="printUebergabe('${o.id}')">🔑 Übergabe</button>
+      ${mapsUrl ? `<a class="btn ghost sm" href="${mapsUrl}" target="_blank">Karte</a>` : ''}
+      <button class="btn ghost sm" onclick="printDatenblatt('${o.id}')">Datenblatt</button>
+      <button class="btn ghost sm" onclick="printBesichtigung('${o.id}')">Infoblatt Besichtigung</button>
+      <button class="btn ghost sm" onclick="printBericht('${o.id}')">Bericht</button>
+      <button class="btn ghost sm" onclick="openRechnung('${o.id}')">Rechnung</button>
+      <button class="btn ghost sm" onclick="applyWorkflowPrompt('${o.id}')">Aufgabenpaket</button>
+      <button class="btn ghost sm" onclick="copyDossier('${o.id}')">Dossier für Claude</button>
+      <button class="btn ghost sm" onclick="printUebergabe('${o.id}')">Übergabe</button>
       <button class="btn ghost sm" onclick="exportObjektJson('${o.id}')">⤓ Export</button>
-      <button class="btn ghost sm" onclick="show('expose');setTimeout(()=>{document.getElementById('e-objekt').value='${o.id}'},0)">✨ Exposé</button>
+      <button class="btn ghost sm" onclick="show('expose');setTimeout(()=>{document.getElementById('e-objekt').value='${o.id}'},0)">Exposé</button>
       <button class="btn sm" onclick="openObjekt('${o.id}')">Bearbeiten</button>
     </div>
   </div>
@@ -1370,12 +1370,12 @@ function viewObjektDetail(id) {
           <div class="f"><b>Zimmer</b>${o.zimmer || '–'}</div>
           <div class="f"><b>Baujahr</b>${o.baujahr || '–'}</div>
           <div class="f"><b>€/m²</b>${o.preis && o.flaeche ? euro(Math.round(o.preis/o.flaeche)) : '–'}</div>
-          <div class="f"><b>Energieausweis</b>${o.eKlasse ? 'Klasse '+esc(o.eKlasse)+(o.eWert?' · '+o.eWert+' kWh/m²a':'')+(o.eArt?' · '+esc(o.eArt):'')+(o.eTraeger?' · '+esc(o.eTraeger):'') : '<span style="color:var(--orange)">⚠ fehlt (Pflichtangabe!)</span>'}</div>
+          <div class="f"><b>Energieausweis</b>${o.eKlasse ? 'Klasse '+esc(o.eKlasse)+(o.eWert?' · '+o.eWert+' kWh/m²a':'')+(o.eArt?' · '+esc(o.eArt):'')+(o.eTraeger?' · '+esc(o.eTraeger):'') : '<span style="color:var(--orange)">fehlt (Pflichtangabe!)</span>'}</div>
           <div class="f"><b>Provisionsanteil</b>${(o.provAnteil!==undefined&&o.provAnteil!=='')?o.provAnteil:100} %${Number(o.provAnteil||100)<100?' (Gemeinschaftsgeschäft)':''}</div>
         </div>
         ${o.highlights ? `<div style="margin-top:14px"><b style="font-size:12px;color:var(--gray-light)">HIGHLIGHTS</b><br>${o.highlights.split(',').map(h=>'<span class="badge b-vorbereitung" style="margin:3px 4px 0 0">'+esc(h.trim())+'</span>').join('')}</div>` : ''}
         ${o.tags ? `<div style="margin-top:10px"><b style="font-size:12px;color:var(--gray-light)">TAGS</b><br>${tagsHtml(o.tags)}</div>` : ''}
-        ${(o.preisHistorie||[]).length ? `<div style="margin-top:14px"><b style="font-size:12px;color:var(--gray-light)">PREIS-HISTORIE</b>${o.preisHistorie.map(p=>`<div style="font-size:13px;color:var(--gray);padding:3px 0">${new Date(p.ts).toLocaleDateString('de-DE')}: ${euro(p.von)} → <strong style="color:${Number(p.auf)<Number(p.von)?'var(--red)':'var(--accent)'}">${euro(p.auf)}</strong></div>`).join('')}</div>` : ''}
+        ${(o.preisHistorie||[]).length ? `<div style="margin-top:14px"><b style="font-size:12px;color:var(--gray-light)">PREIS-HISTORIE</b>${o.preisHistorie.map(p=>`<div style="font-size:13px;color:var(--gray);padding:3px 0">${new Date(p.ts).toLocaleDateString('de-DE')}: ${euro(p.von)} -> <strong style="color:${Number(p.auf)<Number(p.von)?'var(--red)':'var(--accent)'}">${euro(p.auf)}</strong></div>`).join('')}</div>` : ''}
         ${o.notizen ? `<div style="margin-top:14px;font-size:14px;color:var(--gray)"><b style="font-size:12px;color:var(--gray-light)">NOTIZEN</b><br>${esc(o.notizen)}</div>` : ''}
       </div>
 
@@ -1418,10 +1418,10 @@ function viewObjektDetail(id) {
           ${(o.fotos||[]).map((f,i) => `<div class="foto">
             <img src="${f}">
             ${i===0?'<span style="position:absolute;top:4px;left:4px;background:var(--accent);color:#fff;font-size:10px;padding:1px 6px;border-radius:8px">Titel</span>':''}
-            <button onclick="removeFoto('${o.id}',${i})">✕</button>
+            <button onclick="removeFoto('${o.id}',${i})">×</button>
             <div style="position:absolute;bottom:2px;left:2px;right:2px;display:flex;justify-content:space-between">
               ${i>0?`<button style="background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:4px;font-size:10px;padding:1px 5px" onclick="moveFoto('${o.id}',${i},-1)">◀</button>`:'<span></span>'}
-              ${i>0?`<button style="background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:4px;font-size:10px;padding:1px 5px" onclick="setTitelbild('${o.id}',${i})">★</button>`:''}
+              ${i>0?`<button style="background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:4px;font-size:10px;padding:1px 5px" onclick="setTitelbild('${o.id}',${i})">Titel</button>`:''}
               ${i<(o.fotos.length-1)?`<button style="background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:4px;font-size:10px;padding:1px 5px" onclick="moveFoto('${o.id}',${i},1)">▶</button>`:'<span></span>'}
             </div>
           </div>`).join('')}
@@ -1443,14 +1443,14 @@ function viewObjektDetail(id) {
 
     <div>
       <div class="card" style="margin-bottom:18px">
-        <h2>💚 Passende Interessenten (${matches.length})</h2>
+        <h2>Passende Interessenten (${matches.length})</h2>
         ${matches.length ? matches.map(k => `
           <div style="padding:10px 0;border-bottom:1px solid var(--border)">
             <strong class="clickable" onclick="show('kontaktDetail','${k.id}')" style="color:var(--primary)">${esc(k.name)}</strong>
             <div style="font-size:12px;color:var(--gray)">${k.budget?'Budget bis '+euro(k.budget):''}${k.minZimmer?' · ab '+k.minZimmer+' Zi.':''}${k.suchOrt?' · '+esc(k.suchOrt):''}</div>
             <div class="btn-row" style="margin-top:6px">
-              ${k.tel ? `<a class="btn ghost sm" href="tel:${esc(k.tel)}">📞</a>` : ''}
-              ${k.email ? `<a class="btn ghost sm" href="mailto:${esc(k.email)}?subject=${encodeURIComponent('Neues Objekt: '+o.titel)}">✉️</a>` : ''}
+              ${k.tel ? `<a class="btn ghost sm" href="tel:${esc(k.tel)}">Anruf</a>` : ''}
+              ${k.email ? `<a class="btn ghost sm" href="mailto:${esc(k.email)}?subject=${encodeURIComponent('Neues Objekt: '+o.titel)}">E-Mail</a>` : ''}
             </div>
           </div>`).join('') : '<div class="empty">Kein Interessent mit passendem Suchprofil.<br>Suchprofile pflegst du im Kontakt.</div>'}
       </div>
@@ -1470,7 +1470,7 @@ function viewObjektDetail(id) {
 
       <div class="card" style="margin-bottom:18px">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-          <h2 style="margin:0">👁 Besichtigungen</h2>
+          <h2 style="margin:0">Besichtigungen</h2>
           <button class="btn sm ghost" onclick="openAufgabe('','${o.id}','','Besichtigung ')">+ Slot</button>
         </div>
         ${(() => { const b = state.aufgaben.filter(a=>a.objektId===o.id && !a.erledigt && a.titel.toLowerCase().startsWith('besichtigung')); return b.length ? b.sort((x,y)=>(x.datum||'9999')<(y.datum||'9999')?-1:1).map(taskRow).join('') : '<div class="empty">Keine Besichtigungen geplant.<br>Slots landen auch in Aufgaben & Kalender.</div>'; })()}
@@ -1511,13 +1511,13 @@ function docsHtml(o) {
   const docs = ensureDocs(o);
   const done = docs.filter(d=>d.done).length;
   return `
-  <h2>📁 Unterlagen-Checkliste (${done}/${docs.length})</h2>
+  <h2>Unterlagen-Checkliste (${done}/${docs.length})</h2>
   <div class="progress"><div style="width:${docs.length?done/docs.length*100:0}%"></div></div>
   ${docs.map((d,i) => `
     <div class="doc-row ${d.done?'done':''}">
       <input type="checkbox" ${d.done?'checked':''} onchange="toggleDoc('${o.id}',${i})">
       <span style="flex:1">${esc(d.name)}</span>
-      <button class="akt-del" onclick="removeDoc('${o.id}',${i})">✕</button>
+      <button class="akt-del" onclick="removeDoc('${o.id}',${i})">×</button>
     </div>`).join('')}
   <div style="display:flex;gap:8px;margin-top:10px">
     <input id="newdoc-${o.id}" placeholder="Weiteres Dokument…" style="flex:1" onkeydown="if(event.key==='Enter')addDoc('${o.id}')">
@@ -1555,7 +1555,7 @@ function investHtml(o) {
   const faktor = jm ? (preis/jm) : 0;
   const inp = (id,label,val,step) => `<div class="field" style="margin-bottom:8px"><label>${label}</label><input type="number" step="${step||1}" value="${val}" onchange="setFin('${o.id}','${id}',this.value)"></div>`;
   return `
-  <h2>💰 Investment-Rechner</h2>
+  <h2>Investment-Rechner</h2>
   ${!preis ? '<div class="hint">Erst Kaufpreis eintragen.</div>' : `
   <div class="grid c3" style="gap:10px">
     ${inp('ek','Eigenkapital (€)', fin.ek||'', 1000)}
@@ -1585,12 +1585,12 @@ function raeumeHtml(o) {
   const raeume = o.raeume || [];
   const summe = raeume.reduce((s,r)=>s+Number(r.flaeche||0),0);
   return `
-  <h2>📐 Raumaufmaß ${summe?('· '+summe.toFixed(1).replace('.',',')+' m²'):''}</h2>
+  <h2>Raumaufmaß ${summe?('· '+summe.toFixed(1).replace('.',',')+' m²'):''}</h2>
   ${raeume.map((r,i) => `
     <div class="doc-row">
       <span style="flex:1">${esc(r.name)}</span>
       <span>${Number(r.flaeche).toFixed(1).replace('.',',')} m²</span>
-      <button class="akt-del" onclick="removeRaum('${o.id}',${i})">✕</button>
+      <button class="akt-del" onclick="removeRaum('${o.id}',${i})">×</button>
     </div>`).join('')}
   <div style="display:flex;gap:8px;margin-top:10px">
     <input id="raum-name-${o.id}" placeholder="Raum, z.B. Wohnzimmer" style="flex:2" onkeydown="if(event.key==='Enter')addRaum('${o.id}')">
@@ -1619,7 +1619,7 @@ function raumSummeUebernehmen(objektId) {
 function inserateHtml(o) {
   const ins = o.inserate || [];
   return `
-  <h2>📣 Inserate (${ins.length})</h2>
+  <h2>Inserate (${ins.length})</h2>
   ${ins.map((x,i) => {
     const tage = x.seit ? Math.round((Date.now() - new Date(x.seit+'T12:00'))/86400000) : null;
     return `
@@ -1627,7 +1627,7 @@ function inserateHtml(o) {
       <span style="flex:1"><strong>${esc(x.portal)}</strong><br><small style="color:var(--gray-light)">${x.seit ? 'seit '+fmtDate(x.seit)+(tage!==null?' ('+tage+' Tage)':'') : ''}</small></span>
       <span style="font-size:13px;color:var(--gray)">${x.anfragen||0} Anfragen</span>
       <button class="quick-btn" onclick="insAnfrage('${o.id}',${i})">+1</button>
-      <button class="akt-del" onclick="removeInserat('${o.id}',${i})">✕</button>
+      <button class="akt-del" onclick="removeInserat('${o.id}',${i})">×</button>
     </div>`;
   }).join('')}
   <div style="display:flex;gap:8px;margin-top:10px">
@@ -1649,7 +1649,7 @@ function removeInserat(objektId, i) { const o = getObjekt(objektId); o.inserate.
 
 /* Preisstrategie */
 function preisstrategieHtml(o) {
-  if (!o.preis) return '<h2>🎯 Preisstrategie</h2><div class="hint">Erst Kaufpreis eintragen.</div>';
+  if (!o.preis) return '<h2>Preisstrategie</h2><div class="hint">Erst Kaufpreis eintragen.</div>';
   const p = Number(o.preis);
   const rows = [
     { n:'Schneller Verkauf', f:0.93, hint:'≈ −7 % · erzeugt Nachfragedruck, kurze Vermarktungsdauer', c:'var(--accent)' },
@@ -1657,7 +1657,7 @@ function preisstrategieHtml(o) {
     { n:'Maximalpreis', f:1.08, hint:'≈ +8 % · Verhandlungsspielraum, längere Vermarktung & Preisreduktions-Risiko', c:'var(--orange)' },
   ];
   return `
-  <h2>🎯 Preisstrategie</h2>
+  <h2>Preisstrategie</h2>
   ${rows.map(r => `
     <div class="doc-row">
       <span style="flex:1"><strong style="color:${r.c}">${r.n}</strong><br><small style="color:var(--gray-light)">${r.hint}</small></span>
@@ -1677,7 +1677,7 @@ function objektAlarmHtml() {
     return letzte < grenze;
   });
   if (!stale.length) return '';
-  return `<div class="card" style="margin-bottom:18px;background:#fef3f2;border-color:#fecdca">🚨 <strong>Lange keine Aktivität (${tage}+ Tage):</strong> ${stale.map(o=>`<span class="clickable" style="color:var(--primary);font-weight:600" onclick="show('objektDetail','${o.id}')">${esc(o.titel)}</span>`).join(' · ')} – Zeit für ein Eigentümer-Update oder neue Vermarktungsimpulse.</div>`;
+  return `<div class="card" style="margin-bottom:18px;background:#fef3f2;border-color:#fecdca"><strong>Lange keine Aktivität (${tage}+ Tage):</strong> ${stale.map(o=>`<span class="clickable" style="color:var(--primary);font-weight:600" onclick="show('objektDetail','${o.id}')">${esc(o.titel)}</span>`).join(' · ')} – Zeit für ein Eigentümer-Update oder neue Vermarktungsimpulse.</div>`;
 }
 
 /* Anruf-Fokusmodus */
@@ -1687,7 +1687,7 @@ function startFokus() {
   fokusList = state.aufgaben
     .filter(a => !a.erledigt && a.datum && a.datum <= heute)
     .sort((a,b) => (a.datum+(a.zeit||'')) < (b.datum+(b.zeit||'')) ? -1 : 1);
-  if (!fokusList.length) { toast('🎉 Nichts fällig – Fokusmodus nicht nötig'); return; }
+  if (!fokusList.length) { toast('Nichts fällig – Fokusmodus nicht nötig'); return; }
   fokusIdx = 0;
   renderFokus();
   document.getElementById('ov-fokus').classList.add('open');
@@ -1695,7 +1695,7 @@ function startFokus() {
 function renderFokus() {
   const el = document.getElementById('fokus-content');
   if (fokusIdx >= fokusList.length) {
-    el.innerHTML = `<div style="font-size:44px;margin-bottom:10px">🎉</div><h2 style="margin-bottom:8px">Alles abgearbeitet!</h2><p style="color:var(--gray);margin-bottom:18px">${fokusList.length} Aufgaben durchgegangen.</p><button class="btn" onclick="closeModals();render()">Fertig</button>`;
+    el.innerHTML = `<div style="font-size:44px;margin-bottom:10px"></div><h2 style="margin-bottom:8px">Alles abgearbeitet!</h2><p style="color:var(--gray);margin-bottom:18px">${fokusList.length} Aufgaben durchgegangen.</p><button class="btn" onclick="closeModals();render()">Fertig</button>`;
     return;
   }
   const a = fokusList[fokusIdx];
@@ -1704,20 +1704,20 @@ function renderFokus() {
   el.innerHTML = `
     <div style="color:var(--gray-light);font-size:13px;margin-bottom:14px">Aufgabe ${fokusIdx+1} von ${fokusList.length}</div>
     <h2 style="margin-bottom:6px">${esc(a.titel)}</h2>
-    <div style="color:var(--gray);font-size:14px;margin-bottom:16px">${a.datum?fmtDate(a.datum):''}${a.zeit?' · '+a.zeit:''}${o?' · 🏢 '+esc(o.titel):''}</div>
+    <div style="color:var(--gray);font-size:14px;margin-bottom:16px">${a.datum?fmtDate(a.datum):''}${a.zeit?' · '+a.zeit:''}${o?' · '+esc(o.titel):''}</div>
     ${k ? `<div class="card" style="margin-bottom:16px;text-align:left">
       <strong>${esc(k.name)}</strong> <span class="badge b-${k.typ==='Eigentümer'?'eigentuemer':k.typ==='Interessent'?'interessent':'sonstige'}">${k.typ}</span><br>
       ${k.notizen ? '<span style="font-size:13px;color:var(--gray)">'+esc(k.notizen.slice(0,120))+'</span><br>' : ''}
       <div class="btn-row" style="margin-top:10px">
-        ${k.tel ? `<a class="btn green sm" href="tel:${esc(k.tel)}">📞 ${esc(k.tel)}</a>` : ''}
-        ${k.tel ? `<a class="btn ghost sm" href="${waLink(k.tel,'Guten Tag '+k.name+', ')}" target="_blank">💬</a>` : ''}
-        ${k.email ? `<a class="btn ghost sm" href="mailto:${esc(k.email)}">✉️</a>` : ''}
+        ${k.tel ? `<a class="btn green sm" href="tel:${esc(k.tel)}">${esc(k.tel)}</a>` : ''}
+        ${k.tel ? `<a class="btn ghost sm" href="${waLink(k.tel,'Guten Tag '+k.name+', ')}" target="_blank">WhatsApp</a>` : ''}
+        ${k.email ? `<a class="btn ghost sm" href="mailto:${esc(k.email)}">E-Mail</a>` : ''}
       </div>
     </div>` : ''}
     <div class="btn-row" style="justify-content:center">
-      <button class="btn ghost sm" onclick="closeModals();openAktivitaet('${a.kontaktId||''}','${a.objektId||''}')">📝 Dokumentieren</button>
-      <button class="btn green sm" onclick="fokusErledigt()">✓ Erledigt</button>
-      <button class="btn ghost sm" onclick="fokusIdx++;renderFokus()">Überspringen →</button>
+      <button class="btn ghost sm" onclick="closeModals();openAktivitaet('${a.kontaktId||''}','${a.objektId||''}')">Dokumentieren</button>
+      <button class="btn green sm" onclick="fokusErledigt()">Erledigt</button>
+      <button class="btn ghost sm" onclick="fokusIdx++;renderFokus()">Überspringen</button>
     </div>
     <button style="background:none;border:none;color:var(--gray-light);margin-top:14px;font-size:13px;cursor:pointer" onclick="closeModals();render()">Fokusmodus beenden</button>`;
 }
@@ -1751,7 +1751,7 @@ function printWochenplan() {
   }
   const ohne = state.aufgaben.filter(a=>!a.erledigt && !a.datum);
   const ueberf = state.aufgaben.filter(a=>!a.erledigt && a.datum && a.datum < monday.toISOString().slice(0,10));
-  const zeile = a => `<div style="padding:5px 0;border-bottom:1px dotted #ddd">☐ ${a.zeit?'<strong>'+a.zeit+'</strong> · ':''}${esc(a.titel)}${a.objektId?' <span style="color:#888">('+esc(objektName(a.objektId))+')</span>':''}${a.kontaktId?' <span style="color:#888">– '+esc(kontaktName(a.kontaktId))+'</span>':''}</div>`;
+  const zeile = a => `<div style="padding:5px 0;border-bottom:1px dotted #ddd">[ ] ${a.zeit?'<strong>'+a.zeit+'</strong> · ':''}${esc(a.titel)}${a.objektId?' <span style="color:#888">('+esc(objektName(a.objektId))+')</span>':''}${a.kontaktId?' <span style="color:#888">– '+esc(kontaktName(a.kontaktId))+'</span>':''}</div>`;
   const w = window.open('','_blank');
   w.document.write(`<html><head><title>Wochenplan</title><style>
     body{font-family:'Helvetica Neue',Arial,sans-serif;max-width:700px;margin:30px auto;color:#1a1a2e;font-size:13px;line-height:1.5}
@@ -1760,9 +1760,9 @@ function printWochenplan() {
   </style></head><body>
   <h1>Wochenplan</h1>
   <div class="sub">KW ${(() => { const d=new Date(monday); d.setDate(d.getDate()+3); const j1=new Date(d.getFullYear(),0,4); return 1+Math.round(((d-j1)/86400000 - 3 + ((j1.getDay()+6)%7))/7); })()} · ${monday.toLocaleDateString('de-DE')} – ${new Date(monday.getTime()+6*86400000).toLocaleDateString('de-DE')} · ${esc(state.settings.firmaName)}</div>
-  ${ueberf.length ? '<h3 style="background:#fef3f2">⚠️ Überfällig</h3>' + ueberf.map(zeile).join('') : ''}
+  ${ueberf.length ? '<h3 style="background:#fef3f2">Überfällig</h3>' + ueberf.map(zeile).join('') : ''}
   ${tage.map(t => '<h3>'+t.label+'</h3>' + (t.tasks.length ? t.tasks.map(zeile).join('') : '<div style="color:#bbb;padding:4px 0">–</div>')).join('')}
-  ${ohne.length ? '<h3>📋 Ohne Termin</h3>' + ohne.map(zeile).join('') : ''}
+  ${ohne.length ? '<h3>Ohne Termin</h3>' + ohne.map(zeile).join('') : ''}
   </body></html>`);
   w.document.close();
   setTimeout(()=>w.print(), 400);
@@ -1809,16 +1809,9 @@ function importObjekteCsv(input) {
   input.value = '';
 }
 
-/* E-Mail-Signatur */
+/* E-Mail-Signatur (echte IMMOBERLIN/OX-Signatur, Stand 17.06.2026) */
 function signaturHtml() {
-  const s = state.settings;
-  const zeilen = [
-    '<b style="color:#1F4FD8">' + esc(s.firmaName) + '</b>',
-    esc(s.firmaAdresse).replace(/\n/g, ' · '),
-    [s.firmaTel ? 'Tel: ' + esc(s.firmaTel) : '', s.firmaEmail ? 'E-Mail: ' + esc(s.firmaEmail) : ''].filter(Boolean).join(' · '),
-    s.firmaWeb ? '<a href="https://' + esc(s.firmaWeb.replace(/^https?:\/\//,'')) + '" style="color:#1F4FD8">' + esc(s.firmaWeb.replace(/^https?:\/\//,'')) + '</a>' : '',
-  ].filter(Boolean);
-  return '<div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#333;line-height:1.5;border-left:3px solid #00C389;padding-left:12px">' + zeilen.join('<br>') + '</div>';
+  return `<div class="default-style"><a href="http://www.immoberlin.de/"><img style="width: 100%; max-width: 278px;" src="https://www.immoberlin.de/wp-content/uploads/2019/08/immoberlin-LogoWeb-Rot.png" alt="IMMOBERLIN" /></a> <br /><br /><br />Mit freundlichen Grüßen / Cordiali saluti <br /><img src="https://www.immoberlin.de/wp-content/uploads/2025/01/ChristianTortone180.png" alt="Christian Tortone" width="122" height="122" /> <br /><strong>Christian Tortone</strong> <br /><a style="color: #d12026 !important;" href="mailto:tortone@immoberlin.de">tortone@immoberlin.de</a> <br />(030) 895 722 52 <br />01577 - 914 45 24 <br /><br /><a href="https://www.immoberlin.de/referenzen-eigentuemer/herr-tortone/"><img style="width: 100%; max-width: 244px;" src="https://www.immoberlin.de/wp-content/uploads/2022/05/zu-meinen-referenzen.png" /></a> <br /><br />_________________ <br /><br />IMMOBERLIN <br />Inhaber Carsten D. Topel <br />Wildpfad 7 <br />14193 Berlin <br />(030) 895 72 20 <br /><br /><a style="color: #d12026 !important;" href="mailto:service@immoberlin.de">service@immoberlin.de</a> <br /><a style="color: #d12026 !important;" href="http://www.immoberlin.de/">www.immoberlin.de</a> <br /><br /><img style="width: 100%; max-width: 360px;" src="https://www.immoberlin.de/wp-content/uploads/2022/04/Auszeichnungen.png" alt="Unsere Auszeichnungen von Capital, ImmoScout24 und Bellevue" /> <br /><br />Capital: Top-Makler Berlin <br />Bellevue: Best Property Agent <br />Mitglied im IVD &amp; FIABCI <br /><br />Diese E-Mail samt den enthaltenen Anlagen ist vertraulich und nur für den Adressaten bestimmt. Wenn Sie nicht der richtige Adressat sind, bitten wir um Ihren Hinweis. Bitte beachten Sie, dass die Weitergabe, das Kopieren, die Veröffentlichung oder jedwede sonstige Verwendung dieser E-Mail samt der enthaltenen Informationen widerrechtlich ist.</div>`;
 }
 function copySignatur(art) {
   const html = signaturHtml();
@@ -1836,7 +1829,7 @@ function notarBadge(o) {
   const tage = Math.ceil((new Date(o.notartermin+'T12:00') - new Date()) / 86400000);
   if (tage < -30) return '';
   const txt = tage > 1 ? 'Notar in ' + tage + ' Tagen' : tage === 1 ? 'Notar MORGEN' : tage === 0 ? 'Notar HEUTE' : 'Notar war ' + fmtDate(o.notartermin);
-  return ` · <span class="badge" style="background:${tage<=3&&tage>=0?'#fee4e2':'#fff6e6'};color:${tage<=3&&tage>=0?'#b42318':'#b54708'}">⚖️ ${txt} (${fmtDate(o.notartermin)})</span>`;
+  return ` · <span class="badge" style="background:${tage<=3&&tage>=0?'#fee4e2':'#fff6e6'};color:${tage<=3&&tage>=0?'#b42318':'#b54708'}">${txt} (${fmtDate(o.notartermin)})</span>`;
 }
 
 /* Foto-Verwaltung+ */
@@ -1858,19 +1851,19 @@ function feedbackHtml(o) {
   const fb = o.feedback || [];
   const interessenten = aktiveKontakte().filter(k=>k.typ==='Interessent');
   return `
-  <h2>💬 Besichtigungs-Feedback (${fb.length})</h2>
+  <h2>Besichtigungs-Feedback (${fb.length})</h2>
   ${fb.map((f,i) => `
     <div style="padding:9px 0;border-bottom:1px solid var(--border)">
       <div style="display:flex;justify-content:space-between;gap:8px">
         <strong>${esc(kontaktName(f.kontaktId)||'Unbekannt')}</strong>
-        <span>${'★'.repeat(f.note)}${'☆'.repeat(5-f.note)} <button class="akt-del" onclick="removeFeedback('${o.id}',${i})">✕</button></span>
+        <span>Note ${f.note}/5 <button class="akt-del" onclick="removeFeedback('${o.id}',${i})">×</button></span>
       </div>
       <div style="font-size:13px;color:var(--gray)">${fmtDate(f.datum)}${f.text ? ' · ' + esc(f.text) : ''}</div>
     </div>`).join('')}
   ${interessenten.length ? `
   <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
     <select id="fb-k-${o.id}" style="flex:2;min-width:130px">${interessenten.map(k=>`<option value="${k.id}">${esc(k.name)}</option>`).join('')}</select>
-    <select id="fb-n-${o.id}" style="flex:1;min-width:80px"><option value="5">★★★★★</option><option value="4">★★★★</option><option value="3" selected>★★★</option><option value="2">★★</option><option value="1">★</option></select>
+    <select id="fb-n-${o.id}" style="flex:1;min-width:80px"><option value="5">5/5</option><option value="4">4/5</option><option value="3" selected>3/5</option><option value="2">2/5</option><option value="1">1/5</option></select>
     <input id="fb-t-${o.id}" placeholder="Eindruck / Einwand…" style="flex:3;min-width:140px" onkeydown="if(event.key==='Enter')addFeedback('${o.id}')">
     <button class="btn ghost sm" onclick="addFeedback('${o.id}')">+</button>
   </div>` : '<div class="hint" style="margin-top:8px">Interessenten anlegen, um Feedback zu erfassen.</div>'}`;
@@ -1881,7 +1874,7 @@ function addFeedback(objektId) {
   const note = Number(document.getElementById('fb-n-'+objektId).value);
   const text = document.getElementById('fb-t-'+objektId).value.trim();
   (o.feedback = o.feedback || []).push({ kontaktId, note, text, datum: todayStr() });
-  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: '👁 Besichtigung', text: 'Feedback (' + note + '/5)' + (text ? ': ' + text : ''), kontaktId, objektId });
+  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: 'Besichtigung', text: 'Feedback (' + note + '/5)' + (text ? ': ' + text : ''), kontaktId, objektId });
   save(); render();
 }
 function removeFeedback(objektId, i) { const o = getObjekt(objektId); o.feedback.splice(i,1); save(); render(); }
@@ -1893,12 +1886,12 @@ function zeitenHtml(o) {
   const std = min/60;
   const prov = provisionVon(o);
   return `
-  <h2>⏱ Zeiterfassung · ${std.toFixed(1).replace('.',',')} h</h2>
+  <h2>Zeiterfassung · ${std.toFixed(1).replace('.',',')} h</h2>
   ${z.map((x,i) => `
     <div class="doc-row">
       <span style="flex:1">${esc(x.text||'')}<br><small style="color:var(--gray-light)">${fmtDate(x.datum)}</small></span>
       <span>${x.minuten} Min.</span>
-      <button class="akt-del" onclick="removeZeit('${o.id}',${i})">✕</button>
+      <button class="akt-del" onclick="removeZeit('${o.id}',${i})">×</button>
     </div>`).join('')}
   <div style="display:flex;gap:6px;margin-top:10px">
     <input id="zt-t-${o.id}" placeholder="Tätigkeit…" style="flex:2" onkeydown="if(event.key==='Enter')addZeit('${o.id}')">
@@ -1947,7 +1940,7 @@ function openRechnung(objektId) {
   const nr = state.settings.rgPrefix + String(state.settings.rgCounter).padStart(3,'0');
   state.settings.rgCounter++;
   logChange('Rechnung ' + nr + ' erstellt: ' + o.titel + ' an ' + k.name);
-  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: '📝 Notiz', text: 'Provisionsrechnung ' + nr + ' über ' + euro(Math.round(netto*1.19)) + ' erstellt', kontaktId: k.id, objektId });
+  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: 'Notiz', text: 'Provisionsrechnung ' + nr + ' über ' + euro(Math.round(netto*1.19)) + ' erstellt', kontaktId: k.id, objektId });
   save();
   const s = state.settings;
   const w = window.open('','_blank');
@@ -2017,7 +2010,7 @@ function printBericht(objektId) {
   <h3>Interessenten-Pipeline</h3>
   <table><tr><th>Status</th><th>Anzahl</th></tr>${FUNNEL_STUFEN.map(s=>'<tr><td>'+s+'</td><td>'+fCount(s)+'</td></tr>').join('')}</table>
   ${einwaende ? '<h3>Rückmeldungen aus Besichtigungen</h3><p>' + einwaende + '</p>' : ''}
-  ${(o.preisHistorie||[]).length ? '<h3>Preisentwicklung</h3><p>' + o.preisHistorie.map(p=>new Date(p.ts).toLocaleDateString('de-DE')+': '+euro(p.von)+' → '+euro(p.auf)).join('<br>') + '</p>' : ''}
+  ${(o.preisHistorie||[]).length ? '<h3>Preisentwicklung</h3><p>' + o.preisHistorie.map(p=>new Date(p.ts).toLocaleDateString('de-DE')+': '+euro(p.von)+' -> '+euro(p.auf)).join('<br>') + '</p>' : ''}
   <h3>Aktivitäten</h3>
   <p>${akt.length} dokumentierte Aktivitäten (Anrufe, E-Mails, Besichtigungen, Notizen).</p>
   <h3>Einschätzung & nächste Schritte</h3>
@@ -2043,8 +2036,8 @@ function findeDuplikate() {
 }
 function zeigeDuplikate() {
   const p = findeDuplikate();
-  if (!p.length) { toast('✓ Keine Duplikate gefunden'); return; }
-  alert('Mögliche Duplikate:\n\n' + p.map(([a,b,grund])=>'• "'+a.name+'" ↔ "'+b.name+'" (gleiche '+grund+')').join('\n') + '\n\nTipp: Eines der beiden öffnen und archivieren/löschen.');
+  if (!p.length) { toast('Keine Duplikate gefunden'); return; }
+  alert('Mögliche Duplikate:\n\n' + p.map(([a,b,grund])=>'• "'+a.name+'" = "'+b.name+'" (gleiche '+grund+')').join('\n') + '\n\nTipp: Eines der beiden öffnen und archivieren/löschen.');
 }
 
 /* Objekt-Karte (Leaflet + OpenStreetMap) */
@@ -2089,7 +2082,7 @@ async function initKarte() {
     const punkte = mitAdresse.filter(o => o.lat);
     punkte.forEach(o => {
       L.marker([o.lat, o.lng]).addTo(leafletMap)
-        .bindPopup('<strong>' + esc(o.titel) + '</strong><br>' + euro(o.preis) + ' · ' + o.status + '<br><a href="#" onclick="show(\'objektDetail\',\'' + o.id + '\');return false">Öffnen →</a>');
+        .bindPopup('<strong>' + esc(o.titel) + '</strong><br>' + euro(o.preis) + ' · ' + o.status + '<br><a href="#" onclick="show(\'objektDetail\',\'' + o.id + '\');return false">Öffnen</a>');
     });
     if (punkte.length) leafletMap.fitBounds(punkte.map(o=>[o.lat,o.lng]), { padding:[40,40], maxZoom:14 });
     if (status) status.textContent = punkte.length + ' von ' + mitAdresse.length + ' Objekten auf der Karte' + (mitAdresse.length>punkte.length ? ' (Rest: Adresse nicht gefunden)' : '');
@@ -2102,7 +2095,7 @@ function funnelHtml(o) {
   const funnel = o.funnel || [];
   const offen = aktiveKontakte().filter(k => k.typ==='Interessent' && !funnel.some(f=>f.kontaktId===k.id));
   return `
-  <h2>🛒 Käufer-Funnel (${funnel.filter(f=>f.status!=='Abgesagt').length})</h2>
+  <h2>Käufer-Funnel (${funnel.filter(f=>f.status!=='Abgesagt').length})</h2>
   ${funnel.length ? funnel.map((f,i) => {
     const k = getKontakt(f.kontaktId);
     if (!k) return '';
@@ -2112,7 +2105,7 @@ function funnelHtml(o) {
       <select style="max-width:160px;padding:5px 8px;font-size:13px" onchange="setFunnel('${o.id}',${i},this.value)">
         ${FUNNEL_STUFEN.map(s=>`<option ${s===f.status?'selected':''}>${s}</option>`).join('')}
       </select>
-      <button class="akt-del" onclick="removeFunnel('${o.id}',${i})">✕</button>
+      <button class="akt-del" onclick="removeFunnel('${o.id}',${i})">×</button>
     </div>`;
   }).join('') : '<div class="empty">Noch keine Interessenten im Funnel</div>'}
   ${offen.length ? `
@@ -2126,13 +2119,13 @@ function addFunnel(objektId) {
   const kId = document.getElementById('funnel-add-'+objektId).value;
   if (!kId) return;
   (o.funnel = o.funnel || []).push({ kontaktId: kId, status: 'Angefragt' });
-  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: '📝 Notiz', text: 'In Käufer-Funnel aufgenommen', kontaktId: kId, objektId });
+  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: 'Notiz', text: 'In Käufer-Funnel aufgenommen', kontaktId: kId, objektId });
   save(); render();
 }
 function setFunnel(objektId, i, status) {
   const o = getObjekt(objektId);
   o.funnel[i].status = status;
-  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: '📝 Notiz', text: 'Funnel-Status: ' + status, kontaktId: o.funnel[i].kontaktId, objektId });
+  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: 'Notiz', text: 'Funnel-Status: ' + status, kontaktId: o.funnel[i].kontaktId, objektId });
   save(); render();
 }
 function removeFunnel(objektId, i) {
@@ -2148,8 +2141,8 @@ function nebenkostenHtml(o) {
     <option value="">– Bundesland wählen –</option>
     ${Object.keys(GREST).map(b=>`<option ${b===bl?'selected':''}>${b}</option>`).join('')}
   </select>`;
-  if (!o.preis) return `<h2>🧮 Kaufnebenkosten</h2>${sel}<div class="hint" style="margin-top:8px">Erst Kaufpreis eintragen.</div>`;
-  if (!bl) return `<h2>🧮 Kaufnebenkosten</h2>${sel}<div class="hint" style="margin-top:8px">Bundesland wählen für die Berechnung.</div>`;
+  if (!o.preis) return `<h2>Kaufnebenkosten</h2>${sel}<div class="hint" style="margin-top:8px">Erst Kaufpreis eintragen.</div>`;
+  if (!bl) return `<h2>Kaufnebenkosten</h2>${sel}<div class="hint" style="margin-top:8px">Bundesland wählen für die Berechnung.</div>`;
   const preis = Number(o.preis);
   const gestP = GREST[bl];
   const notarP = 2.0;
@@ -2158,7 +2151,7 @@ function nebenkostenHtml(o) {
   const summe = gest+notar+makler;
   const r = (l,p,v) => `<div class="doc-row"><span style="flex:1">${l}</span><span style="color:var(--gray);font-size:13px">${p.toLocaleString('de-DE')} %</span><strong style="width:110px;text-align:right">${euro(Math.round(v))}</strong></div>`;
   return `
-  <h2>🧮 Kaufnebenkosten (Käufer)</h2>
+  <h2>Kaufnebenkosten (Käufer)</h2>
   ${sel}
   <div style="margin-top:10px">
     ${r('Grunderwerbsteuer', gestP, gest)}
@@ -2227,7 +2220,7 @@ function printBesichtigung(objektId) {
     .foot{margin-top:16px;padding-top:8px;border-top:1px solid #ddd;font-size:10px;color:#999}
     @media print{body{margin:10mm auto}}
   </style></head><body>
-  <h1>🚶 Besichtigung · ${esc(o.titel)}</h1>
+  <h1>Besichtigung · ${esc(o.titel)}</h1>
   <div class="sub">${esc(o.typ)}${adresse(o)?' · '+esc(adresse(o)):''} · Status: ${o.status} &nbsp;&nbsp;|&nbsp;&nbsp; Termin: ____________ &nbsp; Uhrzeit: ________</div>
 
   <h3>Eckdaten</h3>
@@ -2237,7 +2230,7 @@ function printBesichtigung(objektId) {
     ${fact('Zimmer', o.zimmer)}
     ${fact('Baujahr', o.baujahr)}
     ${fact('€/m²', o.preis&&o.flaeche?euro(Math.round(o.preis/o.flaeche)):'')}
-    ${fact('Energie', o.eKlasse?'Klasse '+esc(o.eKlasse)+(o.eWert?' · '+o.eWert+' kWh/m²a':''):'⚠ Ausweis fehlt')}
+    ${fact('Energie', o.eKlasse?'Klasse '+esc(o.eKlasse)+(o.eWert?' · '+o.eWert+' kWh/m²a':''):'Ausweis fehlt')}
   </div>
 
   ${hl.length ? '<h3>Argumente / Highlights</h3>'+hl.map(h=>'<span class="hl">'+esc(h)+'</span>').join('') : ''}
@@ -2246,14 +2239,14 @@ function printBesichtigung(objektId) {
     ${raeume.length ? `<div><h3>Räume${raumSumme?' · '+raumSumme.toFixed(1).replace('.',',')+' m²':''}</h3>
     <table>${raeume.map(r=>'<tr><td>'+esc(r.name)+'</td><td style="text-align:right">'+Number(r.flaeche).toFixed(1).replace('.',',')+' m²</td></tr>').join('')}</table></div>` : ''}
     <div>
-      ${eigentuemer.length ? '<h3>Eigentümer</h3>'+eigentuemer.map(k=>'<div>'+esc(k.name)+(k.tel?' · 📞 '+esc(k.tel):'')+'</div>').join('') : ''}
+      ${eigentuemer.length ? '<h3>Eigentümer</h3>'+eigentuemer.map(k=>'<div>'+esc(k.name)+(k.tel?' · '+esc(k.tel):'')+'</div>').join('') : ''}
       ${o.notizen ? '<h3>Interne Notizen</h3><div style="font-size:12px;color:#444">'+esc(o.notizen)+'</div>' : ''}
-      ${offeneTasks.length ? '<h3>Offene Punkte</h3>'+offeneTasks.map(a=>'<div>☐ '+esc(a.titel)+(a.datum?' ('+fmtDate(a.datum)+')':'')+'</div>').join('') : ''}
+      ${offeneTasks.length ? '<h3>Offene Punkte</h3>'+offeneTasks.map(a=>'<div>[ ] '+esc(a.titel)+(a.datum?' ('+fmtDate(a.datum)+')':'')+'</div>').join('') : ''}
     </div>
   </div>
 
   <h3>Checkliste vor Ort</h3>
-  <div>${['Schlüssel','Lüften/Licht','Exposés dabei','Aufmaß prüfen','Mängel fotografieren','Nachbarschaft zeigen'].map(c=>'<span class="chk">☐ '+c+'</span>').join('')}</div>
+  <div>${['Schlüssel','Lüften/Licht','Exposés dabei','Aufmaß prüfen','Mängel fotografieren','Nachbarschaft zeigen'].map(c=>'<span class="chk">[ ] '+c+'</span>').join('')}</div>
 
   <h3>Interessenten & Eindruck</h3>
   <table>
@@ -2345,7 +2338,7 @@ function saveObjekt() {
   };
   if (id && old.preis !== undefined && String(old.preis) !== String(data.preis) && (old.preis || data.preis)) {
     data.preisHistorie.push({ ts: Date.now(), von: old.preis || 0, auf: data.preis || 0 });
-    logChange('Preis geändert: ' + data.titel + ' (' + euro(old.preis) + ' → ' + euro(data.preis) + ')');
+    logChange('Preis geändert: ' + data.titel + ' (' + euro(old.preis) + ' -> ' + euro(data.preis) + ')');
   }
   if (id && (old.strasse !== data.strasse || old.plz !== data.plz || old.ort !== data.ort)) { data.lat = undefined; data.lng = undefined; }
   handleVerkauft(data, old.status);
@@ -2370,18 +2363,18 @@ function handleVerkauft(o, vorherStatus) {
       objektId: o.id, kontaktId: '',
       erledigt: false,
     });
-    toast('🎉 Verkauft! Nachfass-Aufgabe in ' + monate + ' Monaten angelegt.');
+    toast('Verkauft! Nachfass-Aufgabe in ' + monate + ' Monaten angelegt.');
   }
 }
 function archiveObjekt() {
   const id = document.getElementById('o-id').value;
   const o = getObjekt(id);
-  if (o) { o.archiviert = true; save(); closeModals(); show('objekte'); toast('Objekt archiviert (Einstellungen → Archiv)'); }
+  if (o) { o.archiviert = true; save(); closeModals(); show('objekte'); toast('Objekt archiviert (Einstellungen > Archiv)'); }
 }
 function archiveKontakt() {
   const id = document.getElementById('k-id').value;
   const k = getKontakt(id);
-  if (k) { k.archiviert = true; save(); closeModals(); show('kontakte'); toast('Kontakt archiviert (Einstellungen → Archiv)'); }
+  if (k) { k.archiviert = true; save(); closeModals(); show('kontakte'); toast('Kontakt archiviert (Einstellungen > Archiv)'); }
 }
 function restoreItem(art, id) {
   const list = art==='objekt' ? state.objekte : state.kontakte;
@@ -2450,8 +2443,8 @@ function radarHtml() {
             ${x.tage===null ? 'noch nie dokumentiert' : x.tage===0 ? 'heute' : 'vor ' + x.tage + ' Tagen'}
           </td>
           <td style="white-space:nowrap">
-            ${x.k.tel ? `<a class="quick-btn" href="tel:${esc(x.k.tel)}" onclick="event.stopPropagation()" style="text-decoration:none">📞</a>` : ''}
-            <button class="quick-btn" onclick="openAktivitaet('${x.k.id}','${x.k.objektId||''}')">📝+</button>
+            ${x.k.tel ? `<a class="quick-btn" href="tel:${esc(x.k.tel)}" onclick="event.stopPropagation()" style="text-decoration:none">Anruf</a>` : ''}
+            <button class="quick-btn" onclick="openAktivitaet('${x.k.id}','${x.k.objektId||''}')">+</button>
           </td>
         </tr>`).join('')}</tbody>
     </table>
@@ -2464,7 +2457,7 @@ function viewKontakte() {
     return `
     <div class="page-head">
       <div><h1>Kontaktpflege-Radar</h1><div class="sub">Wen hast du aus den Augen verloren?</div></div>
-      <button class="btn ghost" onclick="kontaktAnsicht='liste';render()">☰ Zurück zur Liste</button>
+      <button class="btn ghost" onclick="kontaktAnsicht='liste';render()">Zurück zur Liste</button>
     </div>
     ${radarHtml()}`;
   }
@@ -2474,17 +2467,17 @@ function viewKontakte() {
   <div class="page-head">
     <div><h1>Kontakte</h1><div class="sub">${state.kontakte.length} Kontakte</div></div>
     <div class="btn-row">
-      <button class="btn ghost" onclick="document.getElementById('vcfInput').click()">📇 vCard-Import</button>
-      <button class="btn ghost" onclick="exportVcf()">📇 vCard-Export</button>
-      <button class="btn ghost" onclick="kontaktAnsicht='radar';render()">📡 Pflege-Radar</button>
-      <button class="btn ghost" onclick="zeigeDuplikate()">👯 Duplikate prüfen</button>
-      <button class="btn ghost" onclick="openSerie()">📨 Serien-E-Mail</button>
-      <button class="btn ghost" onclick="document.getElementById('csvInput').click()">⬆️ CSV-Import</button>
+      <button class="btn ghost" onclick="document.getElementById('vcfInput').click()">vCard-Import</button>
+      <button class="btn ghost" onclick="exportVcf()">vCard-Export</button>
+      <button class="btn ghost" onclick="kontaktAnsicht='radar';render()">Pflege-Radar</button>
+      <button class="btn ghost" onclick="zeigeDuplikate()">Duplikate prüfen</button>
+      <button class="btn ghost" onclick="openSerie()">Serien-E-Mail</button>
+      <button class="btn ghost" onclick="document.getElementById('csvInput').click()">CSV-Import</button>
       <button class="btn ghost" onclick="exportKontakteCsv()">CSV-Export</button>
       <button class="btn" onclick="openKontakt()">+ Neuer Kontakt</button>
     </div>
   </div>
-  <div class="filter-row"><input class="search-input" placeholder="🔍 Suchen…" value="${esc(kontaktSuche)}" oninput="kontaktSuche=this.value;render()"></div>
+  <div class="filter-row"><input class="search-input" placeholder="Suchen…" value="${esc(kontaktSuche)}" oninput="kontaktSuche=this.value;render()"></div>
   <div class="card" style="padding:0">
     ${list.length ? `<table>
       <thead><tr><th>Name</th><th>Typ</th><th>Kontakt</th><th>Suchprofil</th><th>Matches</th><th></th></tr></thead>
@@ -2497,13 +2490,13 @@ function viewKontakte() {
           <td><span class="badge b-${k.typ==='Eigentümer'?'eigentuemer':k.typ==='Interessent'?'interessent':'sonstige'}">${k.typ}</span></td>
           <td style="font-size:13px">${esc(k.tel||'')}${k.tel&&k.email?'<br>':''}${esc(k.email||'')}</td>
           <td style="font-size:13px;color:var(--gray)">${esc(profil||'–')}</td>
-          <td>${m ? '<span class="badge b-match">💚 '+m+'</span>' : '–'}</td>
+          <td>${m ? '<span class="badge b-match">'+m+'</span>' : '–'}</td>
           <td style="white-space:nowrap">
-            <button class="quick-btn" title="Anruf/Notiz schnell dokumentieren" onclick="event.stopPropagation();openAktivitaet('${k.id}','${k.objektId||''}')">📞+</button>
-            ${k.email ? `<button class="quick-btn" title="E-Mail aus Vorlage" onclick="event.stopPropagation();openVorlage('${k.id}')">✉️</button>` : ''}
+            <button class="quick-btn" title="Anruf/Notiz schnell dokumentieren" onclick="event.stopPropagation();openAktivitaet('${k.id}','${k.objektId||''}')">+</button>
+            ${k.email ? `<button class="quick-btn" title="E-Mail aus Vorlage" onclick="event.stopPropagation();openVorlage('${k.id}')">Mail</button>` : ''}
           </td>
         </tr>`;}).join('')}</tbody>
-    </table>` : '<div class="empty"><div class="big">👥</div>Keine Kontakte gefunden</div>'}
+    </table>` : '<div class="empty">Keine Kontakte gefunden</div>'}
   </div>`;
 }
 
@@ -2516,15 +2509,15 @@ function viewKontaktDetail(id) {
   const profil = [k.budget?('Budget bis '+euro(k.budget)):'', k.minZimmer?('ab '+k.minZimmer+' Zimmer'):'', k.suchOrt?('Ort: '+k.suchOrt):'', k.suchTyp?('Art: '+k.suchTyp):''].filter(Boolean);
 
   return `
-  <button class="back" onclick="show('kontakte')">← Alle Kontakte</button>
+  <button class="back" onclick="show('kontakte')">Alle Kontakte</button>
   <div class="page-head">
-    <div><h1>${esc(k.name)}</h1><div class="sub"><span class="badge b-${k.typ==='Eigentümer'?'eigentuemer':k.typ==='Interessent'?'interessent':'sonstige'}">${k.typ}</span>${k.objektId ? ' · 🏢 ' + esc(objektName(k.objektId)) : ''}</div></div>
+    <div><h1>${esc(k.name)}</h1><div class="sub"><span class="badge b-${k.typ==='Eigentümer'?'eigentuemer':k.typ==='Interessent'?'interessent':'sonstige'}">${k.typ}</span>${k.objektId ? ' · ' + esc(objektName(k.objektId)) : ''}</div></div>
     <div class="btn-row">
-      ${k.tel ? `<a class="btn ghost sm" href="tel:${esc(k.tel)}">📞 Anrufen</a>` : ''}
-      ${k.tel ? `<a class="btn ghost sm" href="${waLink(k.tel, 'Guten Tag ' + k.name + ', ')}" target="_blank">💬 WhatsApp</a>` : ''}
-      ${k.email ? `<a class="btn ghost sm" href="mailto:${esc(k.email)}">✉️ E-Mail</a>` : ''}
-      ${k.email ? `<button class="btn ghost sm" onclick="openVorlage('${k.id}')">📑 Vorlage</button>` : ''}
-      <button class="btn ghost sm" onclick="openAktivitaet('${k.id}','${k.objektId||''}')">📞+ Schnellnotiz</button>
+      ${k.tel ? `<a class="btn ghost sm" href="tel:${esc(k.tel)}">Anrufen</a>` : ''}
+      ${k.tel ? `<a class="btn ghost sm" href="${waLink(k.tel, 'Guten Tag ' + k.name + ', ')}" target="_blank">WhatsApp</a>` : ''}
+      ${k.email ? `<a class="btn ghost sm" href="mailto:${esc(k.email)}">E-Mail</a>` : ''}
+      ${k.email ? `<button class="btn ghost sm" onclick="openVorlage('${k.id}')">Vorlage</button>` : ''}
+      <button class="btn ghost sm" onclick="openAktivitaet('${k.id}','${k.objektId||''}')">+ Schnellnotiz</button>
       <button class="btn sm" onclick="openKontakt('${k.id}')">Bearbeiten</button>
     </div>
   </div>
@@ -2536,7 +2529,7 @@ function viewKontaktDetail(id) {
         <div class="facts">
           <div class="f"><b>Telefon</b>${k.tel ? '<a href="tel:'+esc(k.tel)+'">'+esc(k.tel)+'</a>' : '–'}</div>
           <div class="f"><b>E-Mail</b>${k.email ? '<a href="mailto:'+esc(k.email)+'">'+esc(k.email)+'</a>' : '–'}</div>
-          <div class="f"><b>Geburtstag</b>${k.geburtstag ? fmtDate(k.geburtstag) + (naechsterGeburtstag(k.geburtstag)<=14 ? ' 🎂' : '') : '–'}</div>
+          <div class="f"><b>Geburtstag</b>${k.geburtstag ? fmtDate(k.geburtstag) + (naechsterGeburtstag(k.geburtstag)<=14 ? ' ' : '') : '–'}</div>
           <div class="f"><b>Tags</b>${k.tags ? tagsHtml(k.tags) : '–'}</div>
         </div>
         ${profil.length ? `<div style="margin-top:14px"><b style="font-size:12px;color:var(--gray-light)">SUCHPROFIL</b><br>${profil.map(p=>'<span class="badge b-vorbereitung" style="margin:3px 4px 0 0">'+esc(p)+'</span>').join('')}</div>` : ''}
@@ -2558,7 +2551,7 @@ function viewKontaktDetail(id) {
     <div>
       ${k.typ==='Interessent' ? `
       <div class="card" style="margin-bottom:18px">
-        <h2>💚 Passende Objekte (${matches.length})</h2>
+        <h2>Passende Objekte (${matches.length})</h2>
         ${matches.length ? matches.map(o => `
           <div style="padding:10px 0;border-bottom:1px solid var(--border)">
             <strong class="clickable" onclick="show('objektDetail','${o.id}')" style="color:var(--primary)">${esc(o.titel)}</strong>
@@ -2653,10 +2646,10 @@ function taskRow(a) {
     <input type="checkbox" ${a.erledigt?'checked':''} onchange="toggleAufgabe('${a.id}')">
     <div class="t-title clickable" onclick="openAufgabe('${a.id}')">
       ${a.prio?'<span class="prio-dot p-'+a.prio+'"></span>':''}${esc(a.titel)}
-      <div class="t-obj">${a.objektId ? '🏢 '+esc(objektName(a.objektId)) : ''}${a.objektId && a.kontaktId ? ' · ' : ''}${a.kontaktId ? '👤 '+esc(kontaktName(a.kontaktId)) : ''}</div>
+      <div class="t-obj">${a.objektId ? ''+esc(objektName(a.objektId)) : ''}${a.objektId && a.kontaktId ? ' · ' : ''}${a.kontaktId ? ''+esc(kontaktName(a.kontaktId)) : ''}</div>
     </div>
     <div class="t-date ${overdue?'overdue':''}">${a.datum ? fmtDate(a.datum) : ''}${a.zeit ? ' · '+a.zeit : ''}</div>
-    ${a.datum && !a.erledigt ? `<button class="ics-btn" title="In Kalender übernehmen" onclick="exportIcs('${a.id}')">📅 +Kalender</button>` : ''}
+    ${a.datum && !a.erledigt ? `<button class="ics-btn" title="In Kalender übernehmen" onclick="exportIcs('${a.id}')">+Kalender</button>` : ''}
   </div>`;
 }
 let aufgabenAnsicht = 'liste';
@@ -2681,9 +2674,9 @@ function kalenderHtml() {
   }
   return `
   <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-    <button class="chip" onclick="kalMonat=new Date(kalMonat.getFullYear(),kalMonat.getMonth()-1,1);render()">←</button>
+    <button class="chip" onclick="kalMonat=new Date(kalMonat.getFullYear(),kalMonat.getMonth()-1,1);render()">Zurück</button>
     <strong style="min-width:160px;text-align:center">${kalMonat.toLocaleDateString('de-DE',{month:'long',year:'numeric'})}</strong>
-    <button class="chip" onclick="kalMonat=new Date(kalMonat.getFullYear(),kalMonat.getMonth()+1,1);render()">→</button>
+    <button class="chip" onclick="kalMonat=new Date(kalMonat.getFullYear(),kalMonat.getMonth()+1,1);render()">Weiter</button>
     <button class="chip" onclick="kalMonat=new Date();render()">Heute</button>
   </div>
   <div class="kal-grid">
@@ -2703,7 +2696,7 @@ function viewAufgaben() {
   <div class="page-head">
     <div><h1>Aufgaben & Termine</h1><div class="sub">${offen.length} offen</div></div>
     <div class="btn-row">
-      <button class="btn ghost" onclick="aufgabenAnsicht='liste';render()">☰ Liste</button>
+      <button class="btn ghost" onclick="aufgabenAnsicht='liste';render()">Liste</button>
       <button class="btn" onclick="openAufgabe()">+ Neue Aufgabe</button>
     </div>
   </div>
@@ -2712,22 +2705,22 @@ function viewAufgaben() {
   <div class="page-head">
     <div><h1>Aufgaben & Termine</h1><div class="sub">${offen.length} offen</div></div>
     <div class="btn-row">
-      ${!notifOn ? '<button class="btn ghost" onclick="notifPermission()">🔔 Erinnerungen aktivieren</button>' : '<span class="badge b-match" style="align-self:center">🔔 Erinnerungen aktiv</span>'}
-      <button class="btn ghost" onclick="exportAlleIcs()">📅 Alle → Kalender</button>
-      <button class="btn ghost" onclick="aufgabenAnsicht='monat';render()">📆 Monat</button>
-      <button class="btn ghost" onclick="planTour()">🚗 Tour</button>
-      <button class="btn ghost" onclick="urlaubsmodus()">🏖 Verschieben</button>
-      <button class="btn ghost" onclick="printWochenplan()">🖨 Wochenplan</button>
-      <button class="btn green" onclick="startFokus()">📞 Fokusmodus</button>
+      ${!notifOn ? '<button class="btn ghost" onclick="notifPermission()">Erinnerungen aktivieren</button>' : '<span class="badge b-match" style="align-self:center">Erinnerungen aktiv</span>'}
+      <button class="btn ghost" onclick="exportAlleIcs()">Alle in Kalender</button>
+      <button class="btn ghost" onclick="aufgabenAnsicht='monat';render()">Monat</button>
+      <button class="btn ghost" onclick="planTour()">Tour</button>
+      <button class="btn ghost" onclick="urlaubsmodus()">Verschieben</button>
+      <button class="btn ghost" onclick="printWochenplan()">Wochenplan</button>
+      <button class="btn green" onclick="startFokus()">Fokusmodus</button>
       <button class="btn" onclick="openAufgabe()">+ Neue Aufgabe</button>
     </div>
   </div>
   <div class="card" style="padding:8px 8px;margin-bottom:18px">
-    ${offen.length ? offen.map(taskRow).join('') : '<div class="empty"><div class="big">🎉</div>Alles erledigt!</div>'}
+    ${offen.length ? offen.map(taskRow).join('') : '<div class="empty">Alles erledigt!</div>'}
   </div>
   ${erledigt.length ? `<h2 style="font-size:15px;color:var(--gray);margin-bottom:10px">Erledigt (${erledigt.length})</h2>
   <div class="card" style="padding:8px 8px">${erledigt.map(taskRow).join('')}</div>` : ''}
-  <div class="hint" style="margin-top:12px">💡 „📅 +Kalender" erzeugt eine .ics-Datei – ein Doppelklick darauf übernimmt den Termin inkl. Erinnerung in Apple Kalender, Google Kalender oder Outlook. Browser-Erinnerungen funktionieren nur, solange die App geöffnet ist.</div>`;
+  <div class="hint" style="margin-top:12px">„ +Kalender" erzeugt eine .ics-Datei – ein Doppelklick darauf übernimmt den Termin inkl. Erinnerung in Apple Kalender, Google Kalender oder Outlook. Browser-Erinnerungen funktionieren nur, solange die App geöffnet ist.</div>`;
 }
 function openAufgabe(id, objektId, kontaktId, titelPrefill) {
   const a = state.aufgaben.find(x=>x.id===id) || {};
@@ -2774,7 +2767,7 @@ function toggleAufgabe(id) {
     if (a.wiederholung === 'woechentlich') d.setDate(d.getDate()+7);
     if (a.wiederholung === 'monatlich') d.setMonth(d.getMonth()+1);
     state.aufgaben.push({ ...a, id: uid(), datum: d.toISOString().slice(0,10), erledigt: false });
-    toast('🔁 Nächste Wiederholung am ' + fmtDate(d.toISOString().slice(0,10)) + ' angelegt');
+    toast('Nächste Wiederholung am ' + fmtDate(d.toISOString().slice(0,10)) + ' angelegt');
   }
   save(); render();
 }
@@ -2786,17 +2779,16 @@ function deleteAufgabe() {
 }
 
 /* ================= Aktivitäten ================= */
+function artLabel(art){ return (art||'').replace(/^[^\p{L}\p{N}]+/u,'').trim() || (art||''); }
 function aktRow(a) {
   const d = new Date(a.ts);
-  const icon = (a.art||'📝').slice(0,2);
   return `
   <div class="akt-row">
-    <div class="akt-icon">${icon}</div>
     <div style="flex:1">
       <div>${esc(a.text)}</div>
-      <div class="akt-meta">${a.art.slice(2).trim()} · ${d.toLocaleDateString('de-DE')} ${d.toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})}${a.kontaktId?' · 👤 '+esc(kontaktName(a.kontaktId)):''}${a.objektId?' · 🏢 '+esc(objektName(a.objektId)):''}</div>
+      <div class="akt-meta">${artLabel(a.art)} · ${d.toLocaleDateString('de-DE')} ${d.toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'})}${a.kontaktId?' · '+esc(kontaktName(a.kontaktId)):''}${a.objektId?' · '+esc(objektName(a.objektId)):''}</div>
     </div>
-    <button class="akt-del" title="Löschen" onclick="deleteAktivitaet('${a.id}')">✕</button>
+    <button class="akt-del" title="Löschen" onclick="deleteAktivitaet('${a.id}')">×</button>
   </div>`;
 }
 function openAktivitaet(kontaktId, objektId) {
@@ -2871,7 +2863,7 @@ function viewExpose() {
           <option value="klassisch">Klassisch & seriös</option>
           <option value="emotional">Emotional & einladend</option>
           <option value="kompakt">Kurz & kompakt (Portal)</option>
-          <option value="englisch">🇬🇧 English (international buyers)</option>
+          <option value="englisch">English (international buyers)</option>
         </select>
       </div>
       <div class="field">
@@ -2880,11 +2872,11 @@ function viewExpose() {
       </div>
     </div>
     <div class="btn-row">
-      <button class="btn green" onclick="generateExpose()">✨ Text generieren</button>
-      <button class="btn ghost" onclick="copyPrompt()">📋 KI-Prompt für Claude kopieren</button>
+      <button class="btn green" onclick="generateExpose()">Text generieren</button>
+      <button class="btn ghost" onclick="copyPrompt()">KI-Prompt für Claude kopieren</button>
       <button class="btn ghost" onclick="copyExpose()">Text kopieren</button>
-      <button class="btn ghost" onclick="mailExpose()">✉️ Per E-Mail senden</button>
-      <button class="btn ghost" onclick="printExpose()">🖨 Drucken / PDF</button>
+      <button class="btn ghost" onclick="mailExpose()">Per E-Mail senden</button>
+      <button class="btn ghost" onclick="printExpose()">Drucken / PDF</button>
     </div>
     <div class="expose-out" id="e-out">Wähle ein Objekt und klicke auf „Text generieren".
 
@@ -2982,7 +2974,7 @@ function mailExpose() {
     '?subject=' + encodeURIComponent('Ihr Immobilienangebot: ' + (o ? o.titel : '')) +
     '&body=' + encodeURIComponent(anrede + text + gruss);
   if (confirm('E-Mail-Entwurf geöffnet. Als Aktivität dokumentieren?')) {
-    state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: '✉️ E-Mail', text: 'Exposé per E-Mail gesendet: ' + (o?o.titel:''), kontaktId: kId, objektId: o?o.id:'' });
+    state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: 'E-Mail', text: 'Exposé per E-Mail gesendet: ' + (o?o.titel:''), kontaktId: kId, objektId: o?o.id:'' });
     save(); toast('Dokumentiert');
   }
 }
@@ -3039,7 +3031,7 @@ function sendVorlage() {
   const text = document.getElementById('v-text').value;
   if (!k || !k.email) { toast('Kontakt hat keine E-Mail'); return; }
   location.href = 'mailto:' + encodeURIComponent(k.email) + '?subject=' + encodeURIComponent(v ? v.name : 'Ihre Immobilienanfrage') + '&body=' + encodeURIComponent(text);
-  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: '✉️ E-Mail', text: 'E-Mail aus Vorlage "' + (v?v.name:'') + '" gesendet', kontaktId: k.id, objektId: document.getElementById('v-objekt').value });
+  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: 'E-Mail', text: 'E-Mail aus Vorlage "' + (v?v.name:'') + '" gesendet', kontaktId: k.id, objektId: document.getElementById('v-objekt').value });
   save(); closeModals(); render(); toast('E-Mail-Entwurf geöffnet & dokumentiert');
 }
 function copyVorlage() {
@@ -3117,12 +3109,12 @@ function leadTabelleHtml() {
           <td>${euro(l.preis)}</td>
           <td class="${l.datum && l.datum < heute ? 't-date overdue':''}">${l.datum ? fmtDate(l.datum) : '–'}</td>
         </tr>`).join('')}</tbody>
-    </table>` : '<div class="empty"><div class="big">🎯</div>Noch keine Akquise-Leads.<br>Hier trackst du Eigentümer von Erstkontakt bis Auftrag.</div>'}
+    </table>` : '<div class="empty">Noch keine Akquise-Leads.<br>Hier trackst du Eigentümer von Erstkontakt bis Auftrag.</div>'}
   </div>`;
 }
 function leadKanbanHtml() {
   const heute = todayStr();
-  if (!state.leads.length) return `<div class="card"><div class="empty"><div class="big">🎯</div>Noch keine Akquise-Leads.<br>Hier trackst du Eigentümer von Erstkontakt bis Auftrag – per Drag & Drop durch die Stufen.</div></div>`;
+  if (!state.leads.length) return `<div class="card"><div class="empty">Noch keine Akquise-Leads.<br>Hier trackst du Eigentümer von Erstkontakt bis Auftrag – per Drag & Drop durch die Stufen.</div></div>`;
   return '<div class="kanban">' + ['Erstkontakt','Bewertung','Verhandlung','Auftrag','Verloren'].map(st => {
     const cards = state.leads.filter(l=>l.stufe===st);
     return `
@@ -3133,7 +3125,7 @@ function leadKanbanHtml() {
           <strong>${esc(l.objekt)}</strong><br>
           ${l.name ? `<span style="color:var(--gray)">${esc(l.name)}</span><br>` : ''}
           ${l.preis ? `<span class="kb-preis">${euro(l.preis)}</span> ` : ''}
-          ${l.datum ? `<span style="font-size:12px;color:${l.datum<heute?'var(--red)':'var(--gray-light)'}">${l.datum<heute?'⚠ ':''}${fmtDate(l.datum)}</span>` : ''}
+          ${l.datum ? `<span style="font-size:12px;color:${l.datum<heute?'var(--red)':'var(--gray-light)'}">${l.datum<heute?'':''}${fmtDate(l.datum)}</span>` : ''}
         </div>`).join('')}
     </div>`;
   }).join('') + '</div>';
@@ -3145,8 +3137,8 @@ function lkbDrop(ev, stufe) {
   if (l && l.stufe !== stufe) {
     l.stufe = stufe;
     (l.historie = l.historie || []).push({stufe, ts: Date.now()});
-    logChange('Lead: ' + l.objekt + ' → ' + stufe);
-    save(); toast(l.objekt + ' → ' + stufe);
+    logChange('Lead: ' + l.objekt + ' -> ' + stufe);
+    save(); toast(l.objekt + ' -> ' + stufe);
   }
   render();
 }
@@ -3163,9 +3155,9 @@ function udoEingangHtml() {
     ${offen.map(x => {
       const u = x.u, b = u.bewertung || {};
       const flags = [];
-      if (b.region_weit) flags.push('🚗 weit draußen');
+      if (b.region_weit) flags.push('weit draußen');
       if (u.preis && b.preis_ok === false) flags.push('Preis über Limit');
-      if (u.wiederkehrer && u.wiederkehrer.zuerst_gesehen) flags.push('🔁 Wiederkehrer seit ' + new Date(u.wiederkehrer.zuerst_gesehen).toLocaleDateString('de-DE'));
+      if (u.wiederkehrer && u.wiederkehrer.zuerst_gesehen) flags.push('Wiederkehrer seit ' + new Date(u.wiederkehrer.zuerst_gesehen).toLocaleDateString('de-DE'));
       return `<div class="udo-row">
         <span class="badge b-${(u.kanal||'mail').toLowerCase()}">${esc(u.kanal||'MAIL')}</span>
         <div class="udo-main">
@@ -3173,7 +3165,7 @@ function udoEingangHtml() {
           <div class="udo-flags">${u.datum ? new Date(u.datum).toLocaleString('de-DE',{weekday:'short',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) + ' Uhr' : ''}${flags.length ? ' · ' + flags.join(' · ') : ''}</div>
         </div>
         <div class="btn-row">
-          <button class="btn sm" onclick="leadFromUdo(${x.i})">→ Lead anlegen</button>
+          <button class="btn sm" onclick="leadFromUdo(${x.i})">Lead anlegen</button>
           <button class="btn ghost sm" onclick="udoWeg(${x.i})">Ausblenden</button>
         </div>
       </div>`;
@@ -3255,7 +3247,7 @@ function convertLead() {
   if (l.name) state.kontakte.push({ id: uid(), name: l.name, typ:'Eigentümer', objektId: oId, tel: l.tel||'', email: l.email||'', budget:'', minZimmer:'', suchOrt:'', suchTyp:'', notizen:'Aus Akquise übernommen' });
   l.stufe = 'Auftrag';
   (l.historie = l.historie || []).push({stufe:'Auftrag', ts: Date.now()});
-  save(); closeModals(); show('objektDetail', oId); toast('Lead als Objekt übernommen 🎉');
+  save(); closeModals(); show('objektDetail', oId); toast('Lead als Objekt übernommen ');
 }
 
 /* ================= Statistik ================= */
@@ -3285,7 +3277,7 @@ function akquiseCardHtml() {
     let standHinweis = '';
     try {
       const alterTage = Math.floor((Date.now() - new Date(ak.stand).getTime()) / 86400000);
-      if (alterTage >= 3) standHinweis = `<div class="hint" style="margin-top:8px">⚠️ Daten sind ${alterTage} Tage alt – läuft deine Mail-Automatik noch?</div>`;
+      if (alterTage >= 3) standHinweis = `<div class="hint" style="margin-top:8px">Daten sind ${alterTage} Tage alt – läuft deine Mail-Automatik noch?</div>`;
     } catch(e) {}
     inner = `
     <div style="display:flex;gap:18px;flex-wrap:wrap;margin-bottom:6px">
@@ -3345,7 +3337,7 @@ function akquiseFunnelCardHtml() {
     rows += `<div class="funnel-row"><span class="fl">${st.label}</span><div class="fb"><div style="width:${Math.round(st.n/max*100)}%;background:${st.farbe}"></div></div><span class="fn">${st.n}</span></div>`;
     if (i < stufen.length-1) {
       const q = st.n ? Math.round(stufen[i+1].n/st.n*100) : null;
-      rows += `<div class="funnel-conv">↓${q !== null ? ' ' + q + ' %' : ''}</div>`;
+      rows += `<div class="funnel-conv">${q !== null ? q + ' %' : ''}</div>`;
     }
   });
   return `<div class="card">
@@ -3403,7 +3395,7 @@ function viewStatistik() {
           <strong style="width:24px;text-align:right">${n}</strong>
         </div>`;
       }).join('')}
-      <h2 style="margin-top:22px">⏱ Wo geht deine Zeit hin?</h2>
+      <h2 style="margin-top:22px">Wo geht deine Zeit hin?</h2>
       ${(() => {
         const mitZeit = state.objekte.map(o => ({ o, min: (o.zeiten||[]).reduce((s,z)=>s+Number(z.minuten||0),0) })).filter(x=>x.min>0).sort((a,b)=>b.min-a.min);
         if (!mitZeit.length) return '<div class="hint" style="margin-bottom:14px">Noch keine Zeiten erfasst (Zeiterfassung am Objekt).</div>';
@@ -3433,12 +3425,12 @@ function kostenHtml(o) {
   const summe = k.reduce((s,x)=>s+Number(x.betrag||0),0);
   const prov = provisionVon(o);
   return `
-  <h2>💸 Vermarktungskosten · ${euro(Math.round(summe))}</h2>
+  <h2>Vermarktungskosten · ${euro(Math.round(summe))}</h2>
   ${k.map((x,i) => `
     <div class="doc-row">
       <span style="flex:1">${esc(x.text||'')}<br><small style="color:var(--gray-light)">${fmtDate(x.datum)}</small></span>
       <span>${euro(x.betrag)}</span>
-      <button class="akt-del" onclick="removeKosten('${o.id}',${i})">✕</button>
+      <button class="akt-del" onclick="removeKosten('${o.id}',${i})">×</button>
     </div>`).join('')}
   <div style="display:flex;gap:6px;margin-top:10px">
     <input id="ko-t-${o.id}" placeholder="z.B. ImmoScout-Inserat" style="flex:2" onkeydown="if(event.key==='Enter')addKosten('${o.id}')">
@@ -3492,7 +3484,7 @@ function printUebergabe(objektId) {
   <h3>Zustand / Mängel / Vereinbarungen</h3>
   ${'<div class="line"></div>'.repeat(6)}
   <h3>Übergebene Unterlagen</h3>
-  <table>${['Energieausweis','Grundrisse','Bedienungsanleitungen','Protokolle/Sonstiges'].map(z=>`<tr><td style="width:30%">☐ ${z}</td><td style="border-bottom:1px solid #999"></td></tr>`).join('')}</table>
+  <table>${['Energieausweis','Grundrisse','Bedienungsanleitungen','Protokolle/Sonstiges'].map(z=>`<tr><td style="width:30%">[ ] ${z}</td><td style="border-bottom:1px solid #999"></td></tr>`).join('')}</table>
   <div class="sig">
     <div>Ort, Datum, Unterschrift Übergebende/r</div>
     <div>Ort, Datum, Unterschrift Übernehmende/r</div>
@@ -3511,7 +3503,7 @@ function datenCheckHtml() {
     const probleme = [];
     if (!o.preis) probleme.push('Preis');
     if (!(o.fotos||[]).length) probleme.push('Fotos');
-    if (!o.eKlasse && ['Vermarktung','Reserviert'].includes(o.status)) probleme.push('Energieausweis ⚠️');
+    if (!o.eKlasse && ['Vermarktung','Reserviert'].includes(o.status)) probleme.push('Energieausweis ');
     if (!o.flaeche && o.typ !== 'Grundstück') probleme.push('Wohnfläche');
     if (!(o.strasse||o.ort)) probleme.push('Adresse');
     const docs = o.docs || [];
@@ -3520,7 +3512,7 @@ function datenCheckHtml() {
   });
   if (!issues.length) return '';
   return `<div class="card" style="margin-bottom:18px">
-    <h2>🩺 Datenqualität (${issues.length} Objekt${issues.length>1?'e':''} unvollständig)</h2>
+    <h2>Datenqualität (${issues.length} Objekt${issues.length>1?'e':''} unvollständig)</h2>
     ${issues.slice(0,6).map(x => `<div style="padding:6px 0;border-bottom:1px solid var(--border);font-size:14px">
       <span class="clickable" style="color:var(--primary);font-weight:600" onclick="show('objektDetail','${x.o.id}')">${esc(x.o.titel)}</span>
       <span style="color:var(--gray)"> – fehlt: ${x.probleme.join(', ')}</span>
@@ -3547,13 +3539,13 @@ function planTour() {
     .nr{width:30px;height:30px;border-radius:50%;background:#1F4FD8;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;flex-shrink:0}
     a.btn{display:inline-block;background:#00C389;color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:bold;margin:16px 0}
   </style></head><body>
-  <h1>🚗 Besichtigungstour ${fmtDate(datum)}</h1>
+  <h1>Besichtigungstour ${fmtDate(datum)}</h1>
   ${termine.map((x,i) => `<div class="stop"><div class="nr">${i+1}</div><div>
     <strong>${x.a.zeit ? x.a.zeit + ' Uhr · ' : ''}${esc(x.a.titel)}</strong><br>
     ${esc(x.o.titel)}<br><span style="color:#777">${esc(adresse(x.o))}</span>
-    ${x.a.kontaktId ? '<br>👤 ' + esc(kontaktName(x.a.kontaktId)) : ''}
+    ${x.a.kontaktId ? '<br>' + esc(kontaktName(x.a.kontaktId)) : ''}
   </div></div>`).join('')}
-  <a class="btn" href="${gmaps}" target="_blank">🗺 Route in Google Maps öffnen (${adressen.length} Stationen)</a>
+  <a class="btn" href="${gmaps}" target="_blank">Route in Google Maps öffnen (${adressen.length} Stationen)</a>
   <p style="font-size:11px;color:#999">Reihenfolge nach Uhrzeit. Erstellt mit ImmoTC.</p>
   </body></html>`);
   w.document.close();
@@ -3653,7 +3645,7 @@ function importObjektJson(input) {
       (p.aufgaben||[]).forEach(a => state.aufgaben.push({...a, id: uid(), objektId: oNeu.id, kontaktId: kMap[a.kontaktId]||''}));
       (p.aktivitaeten||[]).forEach(a => state.aktivitaeten.push({...a, id: uid(), objektId: oNeu.id, kontaktId: kMap[a.kontaktId]||''}));
       logChange('Objekt importiert: ' + oNeu.titel);
-      save(); show('objektDetail', oNeu.id); toast('Objekt importiert 🎉');
+      save(); show('objektDetail', oNeu.id); toast('Objekt importiert ');
     } catch(err) { toast('Datei konnte nicht gelesen werden'); }
   };
   reader.readAsText(file);
@@ -3676,8 +3668,8 @@ function urlaubsmodus() {
     d.setDate(d.getDate() + tage);
     a.datum = d.toISOString().slice(0,10);
   });
-  logChange('🏖 Urlaubsmodus: ' + betroffen.length + ' Aufgaben um ' + tage + ' Tage verschoben');
-  save(); render(); toast(betroffen.length + ' Aufgaben verschoben – schönen Urlaub! 🏖');
+  logChange('Urlaubsmodus: ' + betroffen.length + ' Aufgaben um ' + tage + ' Tage verschoben');
+  save(); render(); toast(betroffen.length + ' Aufgaben verschoben – schönen Urlaub! ');
 }
 
 /* ================= Notizbuch ================= */
@@ -3704,7 +3696,7 @@ function angeboteHtml(o) {
   const max = ang.length ? Math.max(...ang.filter(a=>a.status!=='zurückgezogen'&&a.status!=='abgelehnt').map(a=>Number(a.betrag)), 0) : 0;
   const STATI = ['offen','Gegenangebot','angenommen','abgelehnt','zurückgezogen'];
   return `
-  <h2>💶 Kaufangebote (${ang.filter(a=>a.status==='offen'||a.status==='Gegenangebot').length} aktiv)</h2>
+  <h2>Kaufangebote (${ang.filter(a=>a.status==='offen'||a.status==='Gegenangebot').length} aktiv)</h2>
   ${ang.map(a => {
     const i = (o.angebote||[]).indexOf(a);
     return `
@@ -3713,11 +3705,11 @@ function angeboteHtml(o) {
         <strong class="clickable" style="color:var(--primary)" onclick="show('kontaktDetail','${a.kontaktId}')">${esc(kontaktName(a.kontaktId)||'?')}</strong><br>
         <small style="color:var(--gray-light)">${fmtDate(a.datum)}</small>
       </span>
-      <strong style="${Number(a.betrag)===max && max>0 ? 'color:var(--accent)':''}">${euro(a.betrag)}${Number(a.betrag)===max && max>0 ? ' 🏆':''}</strong>
+      <strong style="${Number(a.betrag)===max && max>0 ? 'color:var(--accent)':''}">${euro(a.betrag)}${Number(a.betrag)===max && max>0 ? ' ':''}</strong>
       <select style="max-width:140px;padding:5px 8px;font-size:13px" onchange="setAngebotStatus('${o.id}',${i},this.value)">
         ${STATI.map(s=>`<option ${s===a.status?'selected':''}>${s}</option>`).join('')}
       </select>
-      <button class="akt-del" onclick="removeAngebot('${o.id}',${i})">✕</button>
+      <button class="akt-del" onclick="removeAngebot('${o.id}',${i})">×</button>
     </div>`;
   }).join('')}
   ${o.preis && max ? `<div class="hint" style="margin-top:6px">Bestes aktives Angebot: <strong>${(max/Number(o.preis)*100).toFixed(1).replace('.',',')} %</strong> vom Angebotspreis (${euro(o.preis)})</div>` : ''}
@@ -3734,16 +3726,16 @@ function addAngebot(objektId) {
   const betrag = document.getElementById('ang-b-'+objektId).value;
   if (!betrag) { toast('Betrag eingeben'); return; }
   (o.angebote = o.angebote || []).push({ kontaktId, betrag, status: 'offen', datum: todayStr() });
-  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: '📝 Notiz', text: 'Kaufangebot über ' + euro(betrag), kontaktId, objektId });
+  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: 'Notiz', text: 'Kaufangebot über ' + euro(betrag), kontaktId, objektId });
   logChange('Angebot ' + euro(betrag) + ' für ' + o.titel);
   save(); render();
 }
 function setAngebotStatus(objektId, i, status) {
   const o = getObjekt(objektId);
   o.angebote[i].status = status;
-  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: '📝 Notiz', text: 'Angebot ' + euro(o.angebote[i].betrag) + ' → ' + status, kontaktId: o.angebote[i].kontaktId, objektId });
+  state.aktivitaeten.push({ id: uid(), ts: Date.now(), art: 'Notiz', text: 'Angebot ' + euro(o.angebote[i].betrag) + ' -> ' + status, kontaktId: o.angebote[i].kontaktId, objektId });
   save(); render();
-  if (status === 'angenommen' && o.status === 'Vermarktung') toast('💡 Tipp: Objektstatus auf „Reserviert" setzen');
+  if (status === 'angenommen' && o.status === 'Vermarktung') toast('Tipp: Objektstatus auf „Reserviert" setzen');
 }
 function removeAngebot(objektId, i) { const o = getObjekt(objektId); o.angebote.splice(i,1); save(); render(); }
 
@@ -3763,7 +3755,7 @@ OBJEKT: ${o.titel}
 - Highlights: ${o.highlights||'k.A.'}
 - Kaltmiete (falls vermietet): ${o.miete ? euro(o.miete)+'/Monat' : 'nicht vermietet/k.A.'}
 - In Vermarktung seit: ${o.createdAt ? new Date(o.createdAt).toLocaleDateString('de-DE') : 'k.A.'}
-- Preis-Historie: ${(o.preisHistorie||[]).map(p=>euro(p.von)+' → '+euro(p.auf)).join('; ') || 'unverändert'}
+- Preis-Historie: ${(o.preisHistorie||[]).map(p=>euro(p.von)+' -> '+euro(p.auf)).join('; ') || 'unverändert'}
 
 VERMARKTUNGSSTAND:
 - Inserate: ${(o.inserate||[]).map(x=>x.portal+' (seit '+(x.seit?fmtDate(x.seit):'?')+', '+(x.anfragen||0)+' Anfragen)').join('; ') || 'keine erfasst'}
@@ -3826,14 +3818,14 @@ function viewEinstellungen() {
       <button class="btn" onclick="saveSettings()">Speichern</button>
     </div>
     <div class="card">
-      <h2>📋 Checklisten-Editor</h2>
+      <h2>Checklisten-Editor</h2>
       <div class="hint" style="margin-bottom:10px">Eigene Unterlagen-Checkliste je Objektart (ein Eintrag pro Zeile). Leer = eingebaute Standardliste. Gilt für neu angelegte Checklisten.</div>
       ${['Wohnung','Haus','Mehrfamilienhaus','Grundstück','Gewerbe'].map(t => `
         <div class="field"><label>${t}</label><textarea data-checktyp="${t}" rows="3" placeholder="${defaultDocs(t).join('&#10;')}">${esc(((state.settings.checklisten||{})[t]||[]).join('\n'))}</textarea></div>`).join('')}
       <button class="btn sm" onclick="saveChecklisten()">Checklisten speichern</button>
     </div>
     <div class="card">
-      <h2>✒️ E-Mail-Signatur</h2>
+      <h2>E-Mail-Signatur</h2>
       <div class="row" style="display:flex;gap:12px">
         <div class="field" style="flex:1"><label>Telefon</label><input id="s-firmatel" value="${esc(state.settings.firmaTel)}"></div>
         <div class="field" style="flex:1"><label>E-Mail</label><input id="s-firmaemail" value="${esc(state.settings.firmaEmail)}"></div>
@@ -3846,10 +3838,10 @@ function viewEinstellungen() {
         <button class="btn ghost sm" onclick="copySignatur('html')">HTML kopieren</button>
         <button class="btn ghost sm" onclick="copySignatur('text')">Text kopieren</button>
       </div>
-      <div class="hint" style="margin-top:8px">Name & Adresse kommen aus den Rechnungsdaten. HTML-Code in Apple Mail/Outlook-Signatureinstellungen einfügen.</div>
+      <div class="hint" style="margin-top:8px">Hinterlegt ist die IMMOBERLIN/OX-Signatur (Stand 17.06.2026). HTML kopieren und z.B. in Portal-Nachrichten oder eine andere Mail-Signatur einfügen. In OX wird sie automatisch angehängt. Die Felder Telefon/E-Mail/Website oben gelten für die Rechnungsdaten, nicht für diese Signatur.</div>
     </div>
     <div class="card">
-      <h2>🧾 Rechnungsdaten</h2>
+      <h2>Rechnungsdaten</h2>
       <div class="hint" style="margin-bottom:10px">Erscheinen auf der Provisionsrechnung. Nächste Nr.: <strong>${esc(state.settings.rgPrefix)}${String(state.settings.rgCounter).padStart(3,'0')}</strong></div>
       <div class="field"><label>Name / Firma</label><input id="s-firmaname" value="${esc(state.settings.firmaName)}"></div>
       <div class="field"><label>Adresse</label><textarea id="s-firmaadresse" rows="2" placeholder="Straße 1&#10;12345 Ort">${esc(state.settings.firmaAdresse)}</textarea></div>
@@ -3864,38 +3856,38 @@ function viewEinstellungen() {
       <button class="btn" onclick="saveRechnungsdaten()">Speichern</button>
     </div>
     <div class="card">
-      <h2>📱 ImmoTC auf dem iPhone</h2>
+      <h2>ImmoTC auf dem iPhone</h2>
       <p style="font-size:14px;color:var(--gray)">1. Lege die Datei <strong>ImmoTC.html</strong> in iCloud Drive (gleicher Ordner reicht, wenn dein Projekte-Ordner synchronisiert wird).<br>
-      2. iPhone: <strong>Dateien-App</strong> → Datei antippen → öffnet sich in Safari. Über „Teilen → Zum Home-Bildschirm" bekommst du ein App-Icon.<br>
+      2. iPhone: <strong>Dateien-App</strong>, Datei antippen, öffnet sich in Safari. Über „Teilen, dann Zum Home-Bildschirm" bekommst du ein App-Icon.<br>
       3. <strong>Wichtig:</strong> Die Daten leben pro Gerät getrennt! Übertrage sie per Backup-Export/-Import (JSON-Datei über iCloud/AirDrop).<br>
       Das Layout passt sich automatisch an – Navigation wandert unten hin.</p>
     </div>
     <div class="card">
-      <h2>👤 Profile / Mandanten</h2>
+      <h2>Profile / Mandanten</h2>
       <div class="hint" style="margin-bottom:10px">Getrennte Datenbestände, z.B. Büro / privat. Aktuell: <strong>${esc((profiles.find(p=>p.id===currentProfile)||{}).name||'')}</strong></div>
       ${profiles.map(p => `
         <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border)">
-          <span>${p.id===currentProfile?'✅ ':''}${esc(p.name)}</span>
+          <span>${p.id===currentProfile?'':''}${esc(p.name)}</span>
           <span class="btn-row">
             ${p.id!==currentProfile?`<button class="btn ghost sm" onclick="switchProfile('${p.id}')">Wechseln</button>`:''}
-            ${profiles.length>1?`<button class="btn danger sm" onclick="deleteProfile('${p.id}')">✕</button>`:''}
+            ${profiles.length>1?`<button class="btn danger sm" onclick="deleteProfile('${p.id}')">×</button>`:''}
           </span>
         </div>`).join('')}
       <button class="btn ghost sm" style="margin-top:10px" onclick="addProfile()">+ Neues Profil</button>
     </div>
     <div class="card">
-      <h2>🔒 Zugriffsschutz</h2>
+      <h2>Zugriffsschutz</h2>
       <div class="section-title">Echte Verschlüsselung (AES-256)</div>
-      <p style="font-size:14px;color:var(--gray);margin-bottom:10px">Status: <strong style="color:${cryptoKey?'var(--accent)':'inherit'}">${cryptoKey ? '🔐 aktiv' : 'aus'}</strong><br>
-      Daten werden mit deinem Passwort verschlüsselt gespeichert. <strong>⚠️ Passwort vergessen = Daten unwiederbringlich weg</strong> (nur ein unverschlüsseltes JSON-Backup rettet dich dann). Backups bleiben unverschlüsselt – sicher aufbewahren.</p>
-      <button class="btn ghost" onclick="${cryptoKey ? 'disableEncryption()' : 'enableEncryption()'}">${cryptoKey ? 'Verschlüsselung aufheben' : '🔐 Verschlüsselung aktivieren'}</button>
+      <p style="font-size:14px;color:var(--gray);margin-bottom:10px">Status: <strong style="color:${cryptoKey?'var(--accent)':'inherit'}">${cryptoKey ? 'aktiv' : 'aus'}</strong><br>
+      Daten werden mit deinem Passwort verschlüsselt gespeichert. <strong>Passwort vergessen = Daten unwiederbringlich weg</strong> (nur ein unverschlüsseltes JSON-Backup rettet dich dann). Backups bleiben unverschlüsselt – sicher aufbewahren.</p>
+      <button class="btn ghost" onclick="${cryptoKey ? 'disableEncryption()' : 'enableEncryption()'}">${cryptoKey ? 'Verschlüsselung aufheben' : 'Verschlüsselung aktivieren'}</button>
       ${!cryptoKey ? `
       <div class="section-title">Oder: einfacher PIN-Sichtschutz</div>
       <p style="font-size:14px;color:var(--gray);margin-bottom:10px">Status: <strong>${state.settings.pin ? 'aktiv' : 'aus'}</strong> · Hält nur neugierige Blicke ab, keine Verschlüsselung.</p>
       <button class="btn ghost" onclick="setPin()">${state.settings.pin ? 'PIN ändern / entfernen' : 'PIN festlegen'}</button>` : ''}
     </div>
     <div class="card">
-      <h2>📜 Änderungsprotokoll</h2>
+      <h2>Änderungsprotokoll</h2>
       <div style="max-height:280px;overflow-y:auto">
       ${(state.changelog||[]).slice(0,50).map(c => `<div style="padding:6px 0;border-bottom:1px solid var(--border);font-size:13px"><span style="color:var(--gray-light)">${new Date(c.ts).toLocaleString('de-DE',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}</span> · ${esc(c.text)}</div>`).join('') || '<div class="empty">Noch keine Einträge</div>'}
       </div>
@@ -3908,22 +3900,22 @@ function viewEinstellungen() {
         <div style="margin-bottom:14px;border:1px solid var(--border);border-radius:8px;padding:12px">
           <div style="display:flex;gap:8px;margin-bottom:8px">
             <input data-vname="${i}" value="${esc(v.name)}" style="font-weight:600">
-            <button class="btn danger sm" onclick="deleteVorlage(${i})">✕</button>
+            <button class="btn danger sm" onclick="deleteVorlage(${i})">×</button>
           </div>
           <textarea data-vtext="${i}" rows="4">${esc(v.text)}</textarea>
         </div>`).join('')}
       </div>
       <div class="btn-row">
         <button class="btn ghost sm" onclick="addVorlage()">+ Neue Vorlage</button>
-        <button class="btn ghost sm" onclick="loadProVorlagen()">✨ Profi-Vorlagen laden (7 Stück)</button>
+        <button class="btn ghost sm" onclick="loadProVorlagen()">Profi-Vorlagen laden (7 Stück)</button>
         <button class="btn sm" onclick="saveVorlagen()">Vorlagen speichern</button>
       </div>
     </div>
     <div class="card">
       <h2>Erinnerungen</h2>
       <p style="font-size:14px;color:var(--gray);margin-bottom:14px">Browser-Benachrichtigungen: <strong>${notifState}</strong><br>
-      Funktionieren nur, solange die App im Browser geöffnet ist. Für zuverlässige Erinnerungen nutze „📅 +Kalender" bei Terminen – die Erinnerung übernimmt dann deine Kalender-App.</p>
-      ${('Notification' in window) && Notification.permission !== 'granted' ? '<button class="btn ghost" onclick="notifPermission()">🔔 Jetzt aktivieren</button>' : ''}
+      Funktionieren nur, solange die App im Browser geöffnet ist. Für zuverlässige Erinnerungen nutze „ +Kalender" bei Terminen – die Erinnerung übernimmt dann deine Kalender-App.</p>
+      ${('Notification' in window) && Notification.permission !== 'granted' ? '<button class="btn ghost" onclick="notifPermission()">Jetzt aktivieren</button>' : ''}
     </div>
     <div class="card">
       <h2>Daten & Backup</h2>
@@ -3933,18 +3925,18 @@ function viewEinstellungen() {
         Auto-Backup: beim Öffnen automatisch herunterladen, wenn das letzte Backup älter als ${state.settings.backupTage} Tage ist
       </label>
       <div class="btn-row">
-        <button class="btn" onclick="exportData()">⬇️ Backup exportieren</button>
-        <button class="btn ghost" onclick="document.getElementById('importFile').click()">⬆️ Backup importieren</button>
+        <button class="btn" onclick="exportData()">Backup exportieren</button>
+        <button class="btn ghost" onclick="document.getElementById('importFile').click()">Backup importieren</button>
       </div>
     </div>
     <div class="card">
-      <h2>📦 Archiv</h2>
+      <h2>Archiv</h2>
       ${(() => {
         const ao = state.objekte.filter(o=>o.archiviert);
         const ak = state.kontakte.filter(k=>k.archiviert);
         if (!ao.length && !ak.length) return '<div class="empty">Archiv ist leer. Archivieren statt Löschen: im Bearbeiten-Dialog.</div>';
-        return ao.map(o=>`<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border)"><span>🏢 ${esc(o.titel)}</span><button class="btn ghost sm" onclick="restoreItem('objekt','${o.id}')">Wiederherstellen</button></div>`).join('')
-          + ak.map(k=>`<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border)"><span>👤 ${esc(k.name)}</span><button class="btn ghost sm" onclick="restoreItem('kontakt','${k.id}')">Wiederherstellen</button></div>`).join('');
+        return ao.map(o=>`<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border)"><span>${esc(o.titel)}</span><button class="btn ghost sm" onclick="restoreItem('objekt','${o.id}')">Wiederherstellen</button></div>`).join('')
+          + ak.map(k=>`<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border)"><span>${esc(k.name)}</span><button class="btn ghost sm" onclick="restoreItem('kontakt','${k.id}')">Wiederherstellen</button></div>`).join('');
       })()}
     </div>
     <div class="card">
@@ -4000,7 +3992,7 @@ function loadProVorlagen() {
     {id:uid(), name:'Absage (wertschätzend)', text:'Guten Tag {name},\n\nherzlichen Dank für Ihr Interesse an "{objekt}" und die Zeit, die Sie investiert haben.\n\nDer Eigentümer hat sich für einen anderen Interessenten entschieden – das sagt nichts über Ihre Anfrage aus, oft entscheiden Kleinigkeiten wie der Zeitplan.\n\nGerne behalte ich Ihr Suchprofil im System und melde mich sofort, wenn ein passendes Objekt hereinkommt – häufig noch bevor es inseriert wird. Ein kurzes Update Ihrer Wünsche genügt.\n\nMit besten Grüßen\nChristian'},
     {id:uid(), name:'Nach dem Kauf', text:'Guten Tag {name},\n\nich hoffe, Sie sind gut in Ihrem neuen Zuhause angekommen und haben sich schon ein wenig eingelebt!\n\nWenn ich Ihnen bei etwas behilflich sein kann – Handwerker-Empfehlungen, Fragen zu Unterlagen oder später einmal eine Einschätzung zum Wert Ihrer Immobilie – melden Sie sich jederzeit gerne.\n\nÜbrigens: Wenn in Ihrem Umfeld jemand verkaufen oder kaufen möchte, freue ich mich über eine Empfehlung.\n\nHerzliche Grüße\nChristian'},
     {id:uid(), name:'Eigentümer-Update (Vermarktungsbericht)', text:'Guten Tag {name},\n\ngerne gebe ich Ihnen ein kurzes Update zur Vermarktung von "{objekt}":\n\n• Anfragen gesamt: [Zahl]\n• Durchgeführte Besichtigungen: [Zahl]\n• Aktueller Stand: [z.B. zwei ernsthafte Interessenten, Finanzierung in Prüfung]\n• Nächste Schritte: [z.B. Zweitbesichtigung am …]\n\nMein Eindruck: [kurze ehrliche Einschätzung zur Nachfrage und ggf. Preisempfehlung]\n\nBei Fragen erreichen Sie mich jederzeit.\n\nMit besten Grüßen\nChristian'},
-    {id:uid(), name:'Preisanpassung vorschlagen', text:'Guten Tag {name},\n\nnach [X] Wochen Vermarktung von "{objekt}" möchte ich offen mit Ihnen sprechen: Die Nachfrage bleibt hinter den Erwartungen zurück ([Zahl] Anfragen, [Zahl] Besichtigungen, bisher kein Angebot).\n\nDie Rückmeldungen der Interessenten zeigen: [häufigster Einwand, z.B. Preis im Vergleich zu ähnlichen Objekten].\n\nMein Vorschlag: eine Anpassung auf {preis} → [neuer Preis]. Erfahrungsgemäß bringt ein klarer Schritt mehr als mehrere kleine – er erzeugt neue Sichtbarkeit auf den Portalen und oft eine zweite Anfragewelle.\n\nLassen Sie uns dazu gerne telefonieren.\n\nMit besten Grüßen\nChristian'}
+    {id:uid(), name:'Preisanpassung vorschlagen', text:'Guten Tag {name},\n\nnach [X] Wochen Vermarktung von "{objekt}" möchte ich offen mit Ihnen sprechen: Die Nachfrage bleibt hinter den Erwartungen zurück ([Zahl] Anfragen, [Zahl] Besichtigungen, bisher kein Angebot).\n\nDie Rückmeldungen der Interessenten zeigen: [häufigster Einwand, z.B. Preis im Vergleich zu ähnlichen Objekten].\n\nMein Vorschlag: eine Anpassung von {preis} auf [neuer Preis]. Erfahrungsgemäß bringt ein klarer Schritt mehr als mehrere kleine – er erzeugt neue Sichtbarkeit auf den Portalen und oft eine zweite Anfragewelle.\n\nLassen Sie uns dazu gerne telefonieren.\n\nMit besten Grüßen\nChristian'}
   ];
   logChange('Profi-Vorlagen geladen');
   save(); render(); toast('7 Profi-Vorlagen geladen');
@@ -4052,7 +4044,7 @@ function backupBannerHtml() {
   const alter = last ? Math.floor((Date.now()-last)/86400000) : null;
   if (last && alter < tage) return '';
   if (!state.objekte.length && !state.kontakte.length) return '';
-  return `<div class="card" style="margin-bottom:18px;background:#fff6e6;border-color:#fdd89b">⚠️ <strong>Backup fällig:</strong> ${last ? 'Dein letztes Backup ist '+alter+' Tage alt.' : 'Du hast noch kein Backup exportiert.'} <button class="btn sm" style="margin-left:10px" onclick="window.showSaveFilePicker?exportDataDirekt():exportData()">Jetzt sichern</button></div>`;
+  return `<div class="card" style="margin-bottom:18px;background:#fff6e6;border-color:#fdd89b"><strong>Backup fällig:</strong> ${last ? 'Dein letztes Backup ist '+alter+' Tage alt.' : 'Du hast noch kein Backup exportiert.'} <button class="btn sm" style="margin-left:10px" onclick="window.showSaveFilePicker?exportDataDirekt():exportData()">Jetzt sichern</button></div>`;
 }
 function importData(input) {
   const file = input.files[0];
@@ -4105,7 +4097,7 @@ checkGeburtstage();
   const tage = Number(state.settings.backupTage || 7);
   const last = state.settings.lastBackup || 0;
   if ((!last || Date.now() - last > tage*86400000) && (state.objekte.length || state.kontakte.length)) {
-    setTimeout(() => { exportData(); toast('📦 Auto-Backup heruntergeladen – bitte in den Projektordner verschieben'); }, 1500);
+    setTimeout(() => { exportData(); toast('Auto-Backup heruntergeladen – bitte in den Projektordner verschieben'); }, 1500);
   }
 })();
 </script>

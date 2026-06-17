@@ -1,6 +1,6 @@
 /* ImmoTC Service Worker – macht die App offline-fähig.
    Strategie: Cache zuerst, im Hintergrund aktualisieren. */
-const CACHE = 'immotc-v1';
+const CACHE = 'immotc-v2';
 const DATEIEN = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png', './icon-180.png'];
 
 self.addEventListener('install', e => {
